@@ -1,0 +1,72 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/main_canvas"
+                android:layout_width="fill_parent"
+                android:layout_height="40dip"
+                android:layout_marginBottom="5dip"
+                android:layout_marginTop="5dip"
+                android:text="Canvas 使用效果研究" />
+
+            <Button
+                android:id="@+id/main_scroller"
+                android:layout_width="fill_parent"
+                android:layout_height="40dip"
+                android:layout_marginBottom="5dip"
+                android:layout_marginTop="5dip"
+                android:text="Scroller 使用效果研究" />
+
+            <Button
+                android:id="@+id/main_yuyin"
+                android:layout_width="fill_parent"
+                android:layout_height="40dip"
+                android:layout_marginBottom="5dip"
+                android:layout_marginTop="5dip"
+                android:text="寺库语音搜素 使用效果研究" />
+            
+            <Button
+                android:id="@+id/main_listview_header"
+                android:layout_width="fill_parent"
+                android:layout_height="40dip"
+                android:layout_marginBottom="5dip"
+                android:layout_marginTop="5dip"
+                android:text="ListView 下拉头部变大" />
+            
+            <Button
+                android:id="@+id/main_radar_search"
+                android:layout_width="fill_parent"
+                android:layout_height="40dip"
+                android:layout_marginBottom="5dip"
+                android:layout_marginTop="5dip"
+                android:text="点击  雷达搜索" />
+            
+            <Button
+                android:id="@+id/main_radar_wave"
+                android:layout_width="fill_parent"
+                android:layout_height="40dip"
+                android:layout_marginBottom="5dip"
+                android:layout_marginTop="5dip"
+                android:text="水波纹  雷达搜索" />
+            <Button
+                android:id="@+id/main_slow_scroll"
+                android:layout_width="fill_parent"
+                android:layout_height="40dip"
+                android:layout_marginBottom="5dip"
+                android:layout_marginTop="5dip"
+                android:text="listview item 缓动效果" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/speed_start_circle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="开始圆形动画" />
+
+        <Button
+            android:id="@+id/speed_start_wave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="开始波动动画" />
+    </LinearLayout>
+
+    <com.xp.exercise.speed.LineCircleTransitionView
+        android:id="@+id/speed_lct_view"
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        android:background="@android:color/black" />
+
+    <com.xp.exercise.speed.SoundWaveView
+        android:id="@+id/speed_sw_view"
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="15dip"
+        android:background="@android:color/black" />
+
+</LinearLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/scroller_btn"
+        android:layout_width="250dip"
+        android:layout_height="40dip"
+        android:background="@android:color/holo_orange_light"
+        android:text="测试滚动" />
+
+    <com.xp.exercise.scroller.MyLinearLayout
+        android:id="@+id/scroller_layout1"
+        android:layout_width="fill_parent"
+        android:layout_height="250dip"
+        android:background="@android:color/darker_gray"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/scroller_layout_btn1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="btn in layer1" />
+    </com.xp.exercise.scroller.MyLinearLayout>
+    <com.xp.exercise.scroller.MyLinearLayout
+        android:id="@+id/scroller_layout2"
+        android:layout_width="fill_parent"
+        android:layout_height="250dip"
+        android:background="@android:color/white"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/scroller_layout_btn2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="btn in layer2" />
+    </com.xp.exercise.scroller.MyLinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical" 
+    xmlns:app="http://schemas.android.com/apk/res/com.xp.exercise">
+
+    <com.xp.exercise.radar.RadarSearchView
+        android:id="@+id/radar_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+    </com.xp.exercise.radar.RadarSearchView>
+
+</LinearLayout>
