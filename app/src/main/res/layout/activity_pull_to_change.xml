@@ -6,7 +6,8 @@
     <com.xp.exercise.listview.ListViewForScrollView
         android:id="@+id/pull_to_change_listview"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layoutAnimation="@anim/listview_animation">
     </com.xp.exercise.listview.ListViewForScrollView>
 
 </LinearLayout>

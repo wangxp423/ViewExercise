@@ -51,6 +51,7 @@ public class ListViewForScrollView extends ListView {
             this.listener.onMyListViewScrollChange(l, t, oldl, oldt);
     }
 
+
     public void setMyScrollListener(OnMyListViewScrollListener mListener) {
         this.listener = mListener;
     }
@@ -91,14 +92,17 @@ public class ListViewForScrollView extends ListView {
             setHeaderImageParams(0);
             break;
         }
-        return true;
+        return super.onTouchEvent(event);
     }
     
     private void getWidthAndHeight(){
-        ViewGroup headerLayout = (ViewGroup) getChildAt(0);
-        mHeaderImage = (ImageView) headerLayout.getChildAt(0);
-        mImageHeight = headerLayout.getHeight();
-        mImageWidth = headerLayout.getWidth();
+        View child = getChildAt(0);
+        if (child instanceof ViewGroup){
+            ViewGroup headerLayout = (ViewGroup)child;
+            mHeaderImage = (ImageView) headerLayout.getChildAt(0);
+            mImageHeight = headerLayout.getHeight();
+            mImageWidth = headerLayout.getWidth();
+        }
     }
     private void setHeaderImageParams(int scrollY) {
         if (scrollY <0) scrollY = 0;
@@ -108,7 +112,6 @@ public class ListViewForScrollView extends ListView {
         int curHeight = height + scrollY;
         LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(width,curHeight);
         mHeaderImage.setLayoutParams(params);
-
     }
 
 }
