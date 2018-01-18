@@ -1,22 +1,27 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.xp.exercise">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.xp.exercise">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+        android:name=".AppApplication"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
             <intent-filter>
-                <data android:scheme="http" android:host="afs.com.afs"/>
+                <data
+                    android:host="afs.com.afs"
+                    android:scheme="http" />
                 <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
             </intent-filter>
@@ -28,6 +33,24 @@
         <activity android:name=".activity.RadarSearchActivity"></activity>
         <activity android:name=".activity.CircleWaveActivity"></activity>
         <activity android:name=".activity.SlowScrollListViewActivity"></activity>
+        <activity
+            android:name=".toolbar.MainToolbarActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".toolbar.CollapsingToolbarActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".toolbar.CoordinatorLayoutActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".toolbar.CollapsingToolbarSnapActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".toolbar.MyBehaviorActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".toolbar.BottomSheetActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
     </application>
 
 </manifest>
