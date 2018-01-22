@@ -26,6 +26,7 @@ public class MainToolbarActivity extends AppCompatActivity implements View.OnCli
         findViewById(R.id.btn_collapsing_toolbar_collaps).setOnClickListener(this);
         findViewById(R.id.btn_my_behavior).setOnClickListener(this);
         findViewById(R.id.btn_bottom_sheet).setOnClickListener(this);
+        findViewById(R.id.btn_title_image).setOnClickListener(this);
         findViewById(R.id.btn_coordinator_scroll).setOnClickListener(this);
         findViewById(R.id.btn_coordinator_scroll_enteralways).setOnClickListener(this);
         findViewById(R.id.btn_coordinator_scroll_enteralways_collapsed).setOnClickListener(this);
@@ -48,6 +49,9 @@ public class MainToolbarActivity extends AppCompatActivity implements View.OnCli
                 break;
             case R.id.btn_bottom_sheet:
                 intent.setClass(this, BottomSheetActivity.class);
+                break;
+            case R.id.btn_title_image:
+                intent.setClass(this, TitleImageBehaviorActivity.class);
                 break;
             case R.id.btn_coordinator_scroll:
                 intent.setClass(this, CoordinatorLayoutActivity.class);

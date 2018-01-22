@@ -51,6 +51,9 @@
         <activity
             android:name=".toolbar.BottomSheetActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".toolbar.TitleImageBehaviorActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
     </application>
 
 </manifest>

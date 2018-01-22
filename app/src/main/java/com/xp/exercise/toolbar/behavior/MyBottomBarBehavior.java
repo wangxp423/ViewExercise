@@ -7,7 +7,7 @@ import android.util.AttributeSet;
 import android.view.View;
 
 /**
- * Created by 赵晨璞 on 2016/7/4.
+ * Created by wangxp on 2018/1/4.
  */
 
 public class MyBottomBarBehavior extends CoordinatorLayout.Behavior<View> {

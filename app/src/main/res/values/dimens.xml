@@ -4,4 +4,6 @@
     <dimen name="sound_wave_line_space">6.5dp</dimen>
     <dimen name="radar_head_image_width">60dip</dimen>
     <dimen name="radar_circle_width">4dip</dimen>
+    <dimen name="image_width">120dip</dimen>
+    <dimen name="image_final_width">32dp</dimen>
 </resources>

@@ -15,7 +15,7 @@ import com.xp.exercise.R;
 import com.xp.exercise.util.LogUtils;
 
 /**
- * @类描述：应用常量类
+ * @类描述：底部拉伸展现效果
  * @创建人：Wangxiaopan
  * @创建时间：2018/1/18 0018 15:29
  * @修改人：
