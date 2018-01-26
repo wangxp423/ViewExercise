@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="@color/colorPrimary">
+    <item android:drawable="@color/line_divide" />
+    <!--<item >--> <!--也可以用一个形状来-->
+    <!--<shape android:shape="oval">-->
+    <!--<solid android:color="@color/colorAccent"></solid>-->
+    <!--</shape>-->
+    <!--</item>-->
+
+    <!--<item android:id="@android:id/mask" android:drawable="@drawable/ic_launcher"> //也可以添加一个图片为mask 不过需要一个id
+    </item>-->
+</ripple>

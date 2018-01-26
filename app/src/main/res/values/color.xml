@@ -8,5 +8,26 @@
     <color name="red">#FFdd0000</color>
     <color name="orange">#FFFF7A03</color>
 	<color name="radar_circle_color">#F10C0C</color>
+
+    <color name="line_approval_process">#15A8EB</color>
+    <color name="line_divide">#CCCCCC</color>
+    <color name="line_process">#E6E6E6</color>
+
+    <color name="tv_tips1">#18191a</color>
+    <color name="tv_tips2">#4D4B4B</color>
+    <color name="tv_tips3">#807E7D</color>
+    <color name="tv_tips4">#B3B0AF</color>
+    <color name="tv_tips_blue">#3399ff</color>
+    <color name="tv_tips_green">#13C083</color>
+    <color name="tv_tips_orange">#FF7733</color>
+    <color name="tv_tips_red">#DE0108</color>
+    <color name="tv_add_train_num">#369EE1</color>
+
+    <color name="bg_tips">#F5F5F5</color>
+    <color name="bg_activity">#F5F5F5</color>
+    <color name="bg_btn">#3399ff</color>
+    <color name="bg_blue">#3399ff</color>
+    <color name="bg_green">#13C083</color>
+    <color name="bg_orange">#FF7733</color>
 	
 </resources>

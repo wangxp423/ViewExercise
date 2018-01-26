@@ -1,11 +1,10 @@
 <resources>
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="AppTheme" parent="Base.Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-
     </style>
 
     <style name="AppTheme.NoActionBar">
@@ -16,6 +15,21 @@
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="ActivitySwitchExplode" parent="AppTheme">
+        <!-- enable window content transitions -->
+        <item name="android:windowContentTransitions">true</item>
+        <!-- specify enter and exit transitions -->
+        <item name="android:windowEnterTransition">@transition/activity_switch_slide</item>
+        <item name="android:windowExitTransition">@transition/activity_switch_slide</item>
+        <item name="android:windowReenterTransition">@transition/activity_switch_slide</item>
+        <!--<item name="android:windowReturnTransition">@transitactivity_switch_explodelode</item>-->
+        <!--&lt;!&ndash; specify shared element transitions &ndash;&gt;-->
+        <!--<item name="android:windowSharedElementEnterTransition">-->
+        <!--@transitactivity_switch_explodelode</item>-->
+        <!--<item name="android:windowSharedElementExitTransition">-->
+        <!--@transitactivity_switch_explodelode</item>-->
+    </style>
     
     <!-- ListView用style -->
     <style name="List">

@@ -1,25 +1,21 @@
 package com.xp.exercise.canvas;
 
-import com.xp.exercise.R;
-
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.graphics.Bitmap.Config;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Matrix;
 import android.graphics.Paint;
 import android.graphics.Path;
+import android.graphics.Path.Direction;
 import android.graphics.Rect;
 import android.graphics.RectF;
-import android.graphics.Region;
-import android.graphics.drawable.Drawable;
-import android.graphics.Path.Direction;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
-import android.widget.ImageView;
+
+import com.xp.exercise.R;
 
 public class CanvasView extends View {
     
@@ -47,8 +43,8 @@ public class CanvasView extends View {
         super.onDraw(canvas);
         setLayerType(View.LAYER_TYPE_SOFTWARE, new Paint());
 //        DrawTest(canvas);
-//        DrawCircleImage(canvas);
-        clipImageView(canvas);
+        DrawCircleImage(canvas);
+//        clipImageView(canvas);
     }
     private void DrawTest(Canvas canvas){
         canvas.drawRGB(180, 250, 250);
@@ -72,6 +68,7 @@ public class CanvasView extends View {
         clipPath.addOval(clipRect, Direction.CW);
 //        clipPath.addCircle(bitmapWidth/2, bitmapHeight/2, bitmapHeight/2, Direction.CW);
         canvas.clipPath(clipPath);
+//        canvas.clipRect(clipRect);
         canvas.drawBitmap(bitmap, null, clipRect, new Paint());
         return canvas;
     }

@@ -1,6 +1,7 @@
 package com.xp.exercise;
 
 import android.app.Activity;
+import android.app.ActivityOptions;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -13,6 +14,7 @@ import com.xp.exercise.activity.RadarSearchActivity;
 import com.xp.exercise.activity.ScrollerTestActivity;
 import com.xp.exercise.activity.SlowScrollListViewActivity;
 import com.xp.exercise.activity.SpeedActivity;
+import com.xp.exercise.activity.VisibleActivity;
 import com.xp.exercise.toolbar.MainToolbarActivity;
 
 public class MainActivity extends Activity implements OnClickListener {
@@ -23,8 +25,9 @@ public class MainActivity extends Activity implements OnClickListener {
         setContentView(R.layout.activity_main);
         findViewById(R.id.main_canvas).setOnClickListener(this);
         findViewById(R.id.main_scroller).setOnClickListener(this);
-        findViewById(R.id.main_yuyin).setOnClickListener(this);
         findViewById(R.id.main_listview_header).setOnClickListener(this);
+        findViewById(R.id.main_visible).setOnClickListener(this);
+        findViewById(R.id.main_yuyin).setOnClickListener(this);
         findViewById(R.id.main_radar_search).setOnClickListener(this);
         findViewById(R.id.main_radar_wave).setOnClickListener(this);
         findViewById(R.id.main_slow_scroll).setOnClickListener(this);
@@ -40,11 +43,15 @@ public class MainActivity extends Activity implements OnClickListener {
             case R.id.main_scroller:
                 startActivity(new Intent(this, ScrollerTestActivity.class));
                 break;
-            case R.id.main_yuyin:
-                startActivity(new Intent(this, SpeedActivity.class));
-                break;
             case R.id.main_listview_header:
                 startActivity(new Intent(this, PullToChangeHeaderActivity.class));
+                break;
+            case R.id.main_visible:
+                Intent intent = new Intent(this, VisibleActivity.class);
+                startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(this).toBundle());
+                break;
+            case R.id.main_yuyin:
+                startActivity(new Intent(this, SpeedActivity.class));
                 break;
             case R.id.main_radar_search:
                 startActivity(new Intent(this, RadarSearchActivity.class));

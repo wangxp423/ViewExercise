@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_btn_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btn_visible_visible"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="显示" />
+
+        <Button
+            android:id="@+id/btn_visible_invisible"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="隐藏" />
+
+        <Button
+            android:id="@+id/btn_visible_pathmotion"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="PathMotion"
+            android:textAllCaps="false"
+            android:transitionName="pathMotion" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/iv_visible_meinv"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:background="@color/tv_tips_green"
+        android:transitionName="sharedView" />
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp">
+
+        <TextView
+            android:id="@+id/iv_visible_second"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:background="@color/red"
+            android:transitionName="secondSharedView" />
+
+        <TextView
+            android:id="@+id/iv_visible_cover_anim"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:background="@color/tv_tips_blue" />
+    </FrameLayout>
+
+
+</LinearLayout>

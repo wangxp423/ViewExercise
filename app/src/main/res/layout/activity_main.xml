@@ -11,51 +11,94 @@
             android:layout_height="match_parent"
             android:orientation="vertical" >
 
-            <Button
+            <TextView
                 android:id="@+id/main_canvas"
                 android:layout_width="fill_parent"
                 android:layout_height="40dip"
-                android:text="Canvas 使用效果研究" />
+                android:gravity="center"
+                android:elevation="2dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/btn_ripple_blue"
+                android:text="Canvas,Path,贝塞尔曲线" />
 
-            <Button
+            <TextView
                 android:id="@+id/main_scroller"
                 android:layout_width="fill_parent"
                 android:layout_height="40dip"
+                android:gravity="center"
+                android:elevation="2dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/btn_ripple_blue"
                 android:text="Scroller 使用效果研究" />
 
-            <Button
-                android:id="@+id/main_yuyin"
-                android:layout_width="fill_parent"
-                android:layout_height="40dip"
-                android:text="寺库语音搜素 使用效果研究" />
-            
-            <Button
+            <TextView
                 android:id="@+id/main_listview_header"
                 android:layout_width="fill_parent"
                 android:layout_height="40dip"
+                android:gravity="center"
+                android:elevation="2dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/btn_ripple_blue"
                 android:text="ListView 下拉头部变大" />
-            
-            <Button
+
+            <TextView
+                android:id="@+id/main_visible"
+                android:layout_width="fill_parent"
+                android:layout_height="40dip"
+                android:gravity="center"
+                android:elevation="2dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/btn_ripple_blue"
+                android:text="揭露效果,指定定制转化，曲线运动" />
+
+            <TextView
+                android:id="@+id/main_yuyin"
+                android:layout_width="fill_parent"
+                android:layout_height="40dip"
+                android:gravity="center"
+                android:layout_margin="5dp"
+                android:elevation="2dp"
+                android:background="@drawable/btn_ripple_blue"
+                android:text="寺库语音搜素 使用效果研究" />
+
+            <TextView
                 android:id="@+id/main_radar_search"
                 android:layout_width="fill_parent"
                 android:layout_height="40dip"
+                android:gravity="center"
+                android:elevation="2dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/btn_ripple_blue"
                 android:text="点击  雷达搜索" />
-            
-            <Button
+
+            <TextView
                 android:id="@+id/main_radar_wave"
                 android:layout_width="fill_parent"
                 android:layout_height="40dip"
+                android:gravity="center"
+                android:elevation="2dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/btn_ripple_blue"
                 android:text="水波纹  雷达搜索" />
-            <Button
+
+            <TextView
                 android:id="@+id/main_slow_scroll"
                 android:layout_width="fill_parent"
                 android:layout_height="40dip"
+                android:gravity="center"
+                android:elevation="2dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/btn_ripple_blue"
                 android:text="listview item 缓动效果" />
 
-            <Button
+            <TextView
                 android:id="@+id/main_toolbar"
                 android:layout_width="fill_parent"
                 android:layout_height="40dip"
+                android:gravity="center"
+                android:elevation="2dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/btn_ripple_blue"
                 android:text="Toolbar 研究" />
         </LinearLayout>
     </ScrollView>

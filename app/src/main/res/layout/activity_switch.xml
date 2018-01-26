@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_parent_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btn_switch_anim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="目标动画" />
+
+    <TextView
+        android:id="@+id/iv_switch_second"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_gravity="center"
+        android:background="@color/tv_tips_blue"
+        android:transitionName="secondSharedView" />
+
+    <TextView
+        android:id="@+id/iv_switch_meinv"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/tv_tips_green"
+        android:scaleType="centerCrop"
+        android:transitionName="sharedView" />
+
+</LinearLayout>
