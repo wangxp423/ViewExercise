@@ -291,18 +291,18 @@ public class PathCubic extends View {
 //        canvas.restore();
 //        invalidate();
         //第二种方式 利用Matrix  这种方式最好
-//        matrix.reset();
-//        matrix.postRotate(degree,mIndicator.getWidth()/2,mIndicator.getHeight()/2); //旋转图片
-//        //便宜图片绘制中心，将绘制中心与当前点重合
-//        matrix.postTranslate(pos[0]-mIndicator.getWidth()/2,pos[1]-mIndicator.getHeight()/2);
-//        canvas.drawBitmap(mIndicator,matrix,paint);
-//        invalidate();
-        //第三种方式 利用getMatrix
         matrix.reset();
-        pathMeasure.getMatrix(pathMeasure.getLength() * currentValue, matrix, PathMeasure.TANGENT_MATRIX_FLAG | PathMeasure.POSITION_MATRIX_FLAG);
-        matrix.preTranslate(-mIndicator.getWidth() / 2, -mIndicator.getHeight() / 2);
+        matrix.postRotate(degree, mIndicator.getWidth() / 2, mIndicator.getHeight() / 2); //旋转图片
+        //便宜图片绘制中心，将绘制中心与当前点重合
+        matrix.postTranslate(pos[0] - mIndicator.getWidth() / 2, pos[1] - mIndicator.getHeight() / 2);
         canvas.drawBitmap(mIndicator, matrix, paint);
         invalidate();
+        //第三种方式 利用getMatrix
+//        matrix.reset();
+//        pathMeasure.getMatrix(pathMeasure.getLength() * currentValue, matrix, PathMeasure.TANGENT_MATRIX_FLAG | PathMeasure.POSITION_MATRIX_FLAG);
+//        matrix.preTranslate(-mIndicator.getWidth() / 2, -mIndicator.getHeight() / 2);
+//        canvas.drawBitmap(mIndicator, matrix, paint);
+//        invalidate();
 
     }
 

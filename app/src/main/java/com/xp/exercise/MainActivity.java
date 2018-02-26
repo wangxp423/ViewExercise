@@ -9,6 +9,7 @@ import android.view.View.OnClickListener;
 
 import com.xp.exercise.activity.CanvasActivity;
 import com.xp.exercise.activity.CircleWaveActivity;
+import com.xp.exercise.activity.FlowWaveActivity;
 import com.xp.exercise.activity.PullToChangeHeaderActivity;
 import com.xp.exercise.activity.RadarSearchActivity;
 import com.xp.exercise.activity.ScrollerTestActivity;
@@ -24,6 +25,7 @@ public class MainActivity extends Activity implements OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         findViewById(R.id.main_canvas).setOnClickListener(this);
+        findViewById(R.id.main_flowwave).setOnClickListener(this);
         findViewById(R.id.main_scroller).setOnClickListener(this);
         findViewById(R.id.main_listview_header).setOnClickListener(this);
         findViewById(R.id.main_visible).setOnClickListener(this);
@@ -39,6 +41,9 @@ public class MainActivity extends Activity implements OnClickListener {
         switch (v.getId()) {
             case R.id.main_canvas:
                 startActivity(new Intent(this, CanvasActivity.class));
+                break;
+            case R.id.main_flowwave:
+                startActivity(new Intent(this, FlowWaveActivity.class));
                 break;
             case R.id.main_scroller:
                 startActivity(new Intent(this, ScrollerTestActivity.class));
