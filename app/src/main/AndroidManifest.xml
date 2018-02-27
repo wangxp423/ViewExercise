@@ -27,7 +27,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.CanvasActivity"></activity>
-        <activity android:name=".activity.FlowWaveActivity"></activity>
+        <activity android:name=".activity.CompassActivity"></activity>
         <activity android:name=".activity.ScrollerTestActivity"></activity>
         <activity android:name=".activity.PullToChangeHeaderActivity"></activity>
         <activity

@@ -304,6 +304,48 @@ public class PathCubic extends View {
 //        canvas.drawBitmap(mIndicator, matrix, paint);
 //        invalidate();
 
+        drawScale(canvas, paint);
+    }
+
+    private int totalScale = 100; //100个刻度
+    private float[] pos11 = new float[2];
+    private float[] pos22 = new float[2];
+    private int currentScale = 1;
+
+    private void drawScale(Canvas canvas, Paint paint) {
+        Paint paint1 = new Paint();
+        paint1.setColor(Color.TRANSPARENT);
+        paint1.setStyle(Paint.Style.STROKE);
+        paint1.setStrokeWidth(2f);
+        //画圆
+        Path path = new Path();
+        path.addCircle(0, 0, 240, Path.Direction.CW);
+        canvas.drawPath(path, paint1);
+        //画圆
+        Path path1 = new Path();
+        path1.addCircle(0, 0, 280, Path.Direction.CW);
+        canvas.drawPath(path1, paint1);
+
+        PathMeasure pathMeasure = new PathMeasure(path, false);
+        PathMeasure pathMeasure1 = new PathMeasure(path1, false);
+
+        for (int i = 1; i < 101; i++) {
+            float distance = 0.01f * i;
+            pathMeasure.getPosTan(pathMeasure.getLength() * distance, pos11, null);
+            pathMeasure1.getPosTan(pathMeasure1.getLength() * distance, pos22, null);
+            canvas.drawLine(pos11[0], pos11[1], pos22[0], pos22[1], paint);
+        }
+        currentScale++;
+        for (int i = 1; i < currentScale; i++) {
+            float distance = 0.01f * i;
+            pathMeasure.getPosTan(pathMeasure.getLength() * distance, pos11, null);
+            pathMeasure1.getPosTan(pathMeasure1.getLength() * distance, pos22, null);
+            canvas.drawLine(pos11[0], pos11[1], pos22[0], pos22[1], new Paint());
+        }
+        if (currentScale > 100) {
+            currentScale = 1;
+        }
+        postInvalidateDelayed(100);
     }
 
 //    float mPreX,mPreY;

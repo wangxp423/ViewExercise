@@ -22,14 +22,14 @@
                 android:text="Canvas,Path,贝塞尔曲线" />
 
             <TextView
-                android:id="@+id/main_flowwave"
+                android:id="@+id/main_compass"
                 android:layout_width="fill_parent"
                 android:layout_height="40dip"
                 android:gravity="center"
                 android:elevation="2dp"
                 android:layout_margin="5dp"
                 android:background="@drawable/btn_ripple_blue"
-                android:text="流量球波纹变化" />
+                android:text="仿小米指南针" />
 
             <TextView
                 android:id="@+id/main_scroller"

@@ -12,6 +12,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.xp.exercise.R;
+import com.xp.exercise.toolbar.util.StatusBarUtil;
 import com.xp.exercise.util.LogUtils;
 
 /**
@@ -35,6 +36,7 @@ public class BottomSheetActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bottom_sheet);
+        StatusBarUtil.setStatusBarColor(BottomSheetActivity.this, R.color.colorPrimaryDark);
         initViews();
         setListener();
     }
@@ -65,7 +67,7 @@ public class BottomSheetActivity extends AppCompatActivity {
             @Override
             public void onSlide(@NonNull View bottomSheet, float slideOffset) {
                 if (bottomSheet.getTop() < 2 * rlTopTitle.getHeight()) {
-                    //设置底部完全展开的时候 出现底部工具栏的动画{
+                    //设置底部完全展开的时候 出现顶部工具栏的动画{
                     rlTopTitle.setVisibility(View.VISIBLE);
                     rlTopTitle.setAlpha(slideOffset);
                     rlTopTitle.setTranslationY(bottomSheet.getTop() - 2 * rlTopTitle.getHeight());

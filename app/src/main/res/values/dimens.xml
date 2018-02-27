@@ -6,4 +6,5 @@
     <dimen name="radar_circle_width">4dip</dimen>
     <dimen name="image_width">120dip</dimen>
     <dimen name="image_final_width">32dp</dimen>
+    <dimen name="title_height">49dp</dimen>
 </resources>

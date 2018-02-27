@@ -36,7 +36,7 @@
         app:layout_anchor="@+id/rl_bottom_sheet_parent_layout"
         app:layout_anchorGravity="top"
         android:layout_gravity="bottom"
-        android:visibility="gone">
+        android:visibility="invisible">
 
         <ImageView
             android:layout_width="23dp"

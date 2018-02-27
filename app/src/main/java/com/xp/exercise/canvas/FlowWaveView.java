@@ -5,7 +5,9 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
+import android.graphics.PathMeasure;
 import android.graphics.Point;
+import android.graphics.RectF;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
@@ -63,6 +65,7 @@ public class FlowWaveView extends View {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
 //        drawWave(canvas);
+        drawScale(canvas);
         drawFlowWave(canvas);
     }
 
@@ -103,24 +106,74 @@ public class FlowWaveView extends View {
         path.reset();
     }
 
+    private int totalScale = 100; //100个刻度
+    private float[] pos11 = new float[2];
+    private float[] pos22 = new float[2];
+    private int currentScale = 1;
     //画流量水波纹
     private void drawFlowWave(Canvas canvas) {
         canvas.save();
+        //在画一个 不是闭合圆的刻度吧
+        Point point = new Point(mWidth / 2, mHeight / 2);
+        Paint circleTransparentPaint = new Paint();
+        circleTransparentPaint.setColor(Color.TRANSPARENT);
+        circleTransparentPaint.setStyle(Paint.Style.STROKE);
+        circleTransparentPaint.setStrokeWidth(2f);
+        //画第一个圆
+        Path circleScalepath = new Path();
+        circleScalepath.addCircle(point.x, point.y, mWidth / 4 + 55, Path.Direction.CW);
+        canvas.drawPath(circleScalepath, circleTransparentPaint);
+
+        //画第二个圆
+        Path circleScalepath1 = new Path();
+        circleScalepath1.addCircle(point.x, point.y, mWidth / 4 + 75, Path.Direction.CW);
+        canvas.drawPath(circleScalepath1, circleTransparentPaint);
+
+        //获取两个path的相关属性
+        PathMeasure pathMeasure = new PathMeasure(circleScalepath, false);
+        PathMeasure pathMeasure1 = new PathMeasure(circleScalepath1, false);
+
+        Paint lineScalePaint = new Paint();
+        lineScalePaint.setColor(Color.RED);
+        lineScalePaint.setStyle(Paint.Style.STROKE);
+        lineScalePaint.setStrokeWidth(2f);
+        for (int i = 0; i < 101; i++) { //画刻度
+            float distance = 0.01f * i;
+            pathMeasure.getPosTan(pathMeasure.getLength() * distance, pos11, null);
+            pathMeasure1.getPosTan(pathMeasure1.getLength() * distance, pos22, null);
+            canvas.drawLine(pos11[0], pos11[1], pos22[0], pos22[1], lineScalePaint);
+        }
+        currentScale++;
+        for (int i = 0; i < currentScale; i++) { //画递变刻度
+            float distance = 0.01f * i;
+            pathMeasure.getPosTan(pathMeasure.getLength() * distance, pos11, null);
+            pathMeasure1.getPosTan(pathMeasure1.getLength() * distance, pos22, null);
+            lineScalePaint.setColor(Color.BLUE);
+            canvas.drawLine(pos11[0], pos11[1], pos22[0], pos22[1], lineScalePaint);
+        }
+        if (currentScale > 100) {
+            currentScale = 1;
+        }
+
+
+        //画圆
         Paint circlePaint = new Paint();
         circlePaint.setColor(Color.RED);
         circlePaint.setStyle(Paint.Style.STROKE);
         circlePaint.setStrokeWidth(10f);
         canvas.drawCircle(mWidth / 2, mHeight / 2, mWidth / 4 + 5, circlePaint);
 
+        //画淡一点的圆
         Paint circlePaint1 = new Paint();
         circlePaint1.setColor(Color.RED);
         circlePaint1.setStyle(Paint.Style.STROKE);
-        circlePaint1.setStrokeWidth(100f);
+        circlePaint1.setStrokeWidth(50f);
         circlePaint1.setAlpha(125);
-        canvas.drawCircle(mWidth / 2, mHeight / 2, mWidth / 4 + 50, circlePaint1);
+        canvas.drawCircle(mWidth / 2, mHeight / 2, mWidth / 4 + 30, circlePaint1);
         canvas.restore();
 
-        Path circlePath = new Path(); //剪裁的话 就只能在剪裁区显示
+        //画剪裁区 剪裁的话 就只能在剪裁区显示
+        Path circlePath = new Path();
         circlePath.addCircle(mWidth / 2, mHeight / 2, mWidth / 4, Path.Direction.CW);
         canvas.clipPath(circlePath);
 
@@ -196,5 +249,51 @@ public class FlowWaveView extends View {
     }
 
 
+    private float startAngle = 120;
+    private float sweepAngle = 300;
+
+    //画一个不闭合圆的刻度
+    //还有另一种做法 就是旋转坐标系
+    private void drawScale(Canvas canvas) {
+        float radius = mWidth / 4 + 120f;
+        float radius1 = radius + 40;
+        Paint circlePaint = new Paint();
+        circlePaint.setColor(Color.BLACK);
+        circlePaint.setAntiAlias(true);
+        circlePaint.setStyle(Paint.Style.STROKE);
+        circlePaint.setStrokeWidth(2f);
+        RectF rectF = new RectF(mWidth / 2 - radius, mHeight / 2 - radius, mWidth / 2 + radius, mHeight / 2 + radius);
+        Path path = new Path();
+        path.arcTo(rectF, startAngle, sweepAngle, false);
+        canvas.drawPath(path, circlePaint);
+        RectF rectF1 = new RectF(mWidth / 2 - radius1, mHeight / 2 - radius1, mWidth / 2 + radius1, mHeight / 2 + radius1);
+        Path path1 = new Path();
+        path1.arcTo(rectF1, startAngle, sweepAngle, false);
+        circlePaint.setColor(Color.TRANSPARENT);
+        canvas.drawPath(path1, circlePaint);
+
+        //获取两个path的相关属性
+        PathMeasure pathMeasure = new PathMeasure(path, false);
+        PathMeasure pathMeasure1 = new PathMeasure(path1, false);
+
+        Paint lineScalePaint = new Paint();
+        lineScalePaint.setColor(Color.BLACK);
+        lineScalePaint.setStyle(Paint.Style.STROKE);
+        lineScalePaint.setStrokeWidth(2f);
+        for (int i = 0; i < 101; i++) { //画刻度
+            float distance = 0.01f * i;
+            pathMeasure.getPosTan(pathMeasure.getLength() * distance, pos11, null);
+            pathMeasure1.getPosTan(pathMeasure1.getLength() * distance, pos22, null);
+            canvas.drawLine(pos11[0], pos11[1], pos22[0], pos22[1], lineScalePaint);
+        }
+        for (int i = 0; i < currentScale; i++) { //画递变刻度
+            float distance = 0.01f * i;
+            pathMeasure.getPosTan(pathMeasure.getLength() * distance, pos11, null);
+            pathMeasure1.getPosTan(pathMeasure1.getLength() * distance, pos22, null);
+            lineScalePaint.setColor(Color.RED);
+            canvas.drawLine(pos11[0], pos11[1], pos22[0], pos22[1], lineScalePaint);
+        }
+
+    }
 
 }
