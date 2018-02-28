@@ -48,11 +48,18 @@ public class PathCubic extends View {
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+        int width = MeasureSpec.getSize(widthMeasureSpec);
+        int height = MeasureSpec.getSize(heightMeasureSpec);
+//        int min = Math.min(width,height);
+//        setMeasuredDimension(min,min);
+        LogUtils.d("Test", "width = " + width + " height = " + height);
+        LogUtils.d("Test", "getWidth = " + getWidth() + " getHeight = " + getHeight());
     }
 
     @Override
     protected void onLayout(boolean changed, int left, int top, int right, int bottom) {
         super.onLayout(changed, left, top, right, bottom);
+        LogUtils.d("Test", "change = " + changed + " left = " + left + " top = " + top + "right = " + right + " bottom = " + bottom);
     }
 
     Path mPath = new Path();
@@ -64,7 +71,11 @@ public class PathCubic extends View {
         paint.setColor(Color.RED);
         paint.setStyle(Paint.Style.STROKE);
         paint.setStrokeWidth(10f);
-        setLayerType(LAYER_TYPE_SOFTWARE, paint);
+        //加下面这一句话 onDraw会不停的刷新 但是它并不影响方法中的全局变量值 而且会占用比较大的CUP资源
+//        setLayerType(LAYER_TYPE_SOFTWARE,null);
+        //LAYER_TYPE_NONE:view按一般方式绘制，不使用离屏缓冲．这是默认的行为．
+        //LAYER_TYPE_HARDWARE:如果应用被硬加速了，view会被绘制到一个硬件纹理中．如果应用没被硬加速，此类型的layer的行为同于LAYER_TYPE_SOFTWARE．
+        //LAYER_TYPE_SOFTWARE:view被绘制到一个bitmap中．
 //        drawTest(canvas,paint);
 
 //        drawBubble(canvas, paint);
@@ -79,6 +90,8 @@ public class PathCubic extends View {
 //        userCubicDrawCircle(canvas, paint);
 //        canvas.restore();
 
+        drawScaleTest(canvas, paint);
+        drawPurifier(canvas, paint);
         arrawRotate(canvas, paint);
 
         //轨迹
@@ -312,6 +325,7 @@ public class PathCubic extends View {
     private float[] pos22 = new float[2];
     private int currentScale = 1;
 
+    //画圆形刻度 第一种 用path
     private void drawScale(Canvas canvas, Paint paint) {
         Paint paint1 = new Paint();
         paint1.setColor(Color.TRANSPARENT);
@@ -346,6 +360,54 @@ public class PathCubic extends View {
             currentScale = 1;
         }
         postInvalidateDelayed(100);
+    }
+
+    private float startAngle = 120;
+    private float sweepAngle = 300;
+    private float radius = 350;
+
+    //画圆形刻度 第二种 用canvas.rotate旋转画布
+    private void drawScaleTest(Canvas canvas, Paint paint) {
+        paint.setStrokeWidth(2f);
+        //先画一个圆弧
+        RectF rectF = new RectF(getWidth() / 2 - radius, getHeight() / 2 - radius, getWidth() / 2 + radius, getHeight() / 2 + radius);
+        canvas.drawArc(rectF, startAngle, sweepAngle, false, paint);
+        canvas.save();
+        canvas.translate(getWidth() / 2, getHeight() / 2);
+        canvas.drawPoint(0, 0, paint);
+        canvas.rotate(30);
+        //确定每次旋转的角度
+        float rotateAngle = sweepAngle / 99;
+        for (int i = 0; i < 100; i++) {
+            //画刻度线
+            canvas.drawLine(0, radius, 0, radius - 40, paint);
+            canvas.rotate(rotateAngle);
+        }
+        canvas.restore();
+    }
+
+    //画 空气净化器
+    private float startPAngle = 0;
+    private float sweepPAngle = 30;
+    private float pRadius = 300;
+    private float pRadiu1 = 240;
+
+    private void drawPurifier(Canvas canvas, Paint paint) {
+        canvas.drawCircle(getWidth() / 2, getHeight() / 2, pRadius, paint);
+        paint.setStrokeWidth(120f);
+        paint.setAntiAlias(true);
+        paint.setAlpha(60);
+        Path path = new Path();
+        RectF rectF = new RectF(getWidth() / 2 - pRadiu1, getHeight() / 2 - pRadiu1, getWidth() / 2 + pRadiu1, getHeight() / 2 + pRadiu1);
+        int total = (int) (360 / sweepPAngle);
+        for (int i = 0; i < total; i++) {
+            if (i % 2 == 0) {
+                //这一步用path画的话 如果加了alpha 不知道为啥 色块颜色不一样
+//                path.arcTo(rectF,sweepPAngle * i, sweepPAngle,true);
+//                canvas.drawPath(path, paint);
+                canvas.drawArc(rectF, sweepPAngle * i, sweepPAngle, false, paint);
+            }
+        }
     }
 
 //    float mPreX,mPreY;

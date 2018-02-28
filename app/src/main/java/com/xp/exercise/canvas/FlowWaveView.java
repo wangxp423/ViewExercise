@@ -65,6 +65,7 @@ public class FlowWaveView extends View {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
 //        drawWave(canvas);
+        drawScaleTest(canvas);
         drawScale(canvas);
         drawFlowWave(canvas);
     }
@@ -249,11 +250,8 @@ public class FlowWaveView extends View {
     }
 
 
-    private float startAngle = 120;
-    private float sweepAngle = 300;
 
     //画一个不闭合圆的刻度
-    //还有另一种做法 就是旋转坐标系
     private void drawScale(Canvas canvas) {
         float radius = mWidth / 4 + 120f;
         float radius1 = radius + 40;
@@ -294,6 +292,34 @@ public class FlowWaveView extends View {
             canvas.drawLine(pos11[0], pos11[1], pos22[0], pos22[1], lineScalePaint);
         }
 
+    }
+
+    private float startAngle = 120;
+    private float sweepAngle = 300;
+    private float radius = 500;
+
+    //画圆形刻度 第二种 用canvas.rotate旋转画布
+    private void drawScaleTest(Canvas canvas) {
+        Paint paint = new Paint();
+        paint.setColor(Color.RED);
+        paint.setStrokeWidth(2f);
+        paint.setStyle(Paint.Style.STROKE);
+        paint.setAntiAlias(true);
+        //先画一个圆弧
+        RectF rectF = new RectF(getWidth() / 2 - radius, getHeight() / 2 - radius, getWidth() / 2 + radius, getHeight() / 2 + radius);
+        canvas.drawArc(rectF, startAngle, sweepAngle, false, paint);
+        canvas.save();
+        canvas.translate(getWidth() / 2, getHeight() / 2);
+        canvas.drawPoint(0, 0, paint);
+        canvas.rotate(30);
+        //确定每次旋转的角度
+        float rotateAngle = sweepAngle / 99;
+        for (int i = 0; i < 100; i++) {
+            //画刻度线
+            canvas.drawLine(0, radius, 0, radius - 40, paint);
+            canvas.rotate(rotateAngle);
+        }
+        canvas.restore();
     }
 
 }

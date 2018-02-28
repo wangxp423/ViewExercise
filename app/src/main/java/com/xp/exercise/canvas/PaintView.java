@@ -60,6 +60,7 @@ public class PaintView extends View {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
         //加这行代码 圆形阴影才能生效
+        //这个最好不要使用会导致onDraw不停的执行 而且会导致cup内存开销变大
         setLayerType(LAYER_TYPE_SOFTWARE, null);
 //        Test1(canvas);
 //        Test2(canvas);
