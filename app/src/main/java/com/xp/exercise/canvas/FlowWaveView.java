@@ -3,11 +3,13 @@ package com.xp.exercise.canvas;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
+import android.graphics.DashPathEffect;
 import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.PathMeasure;
 import android.graphics.Point;
 import android.graphics.RectF;
+import android.graphics.SweepGradient;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
@@ -222,7 +224,6 @@ public class FlowWaveView extends View {
         path1.close();
         canvas.drawPath(path, wavePaint);
         canvas.drawPath(path1, wavePaint);
-        canvas.restore();
         Paint textPaint = new Paint();
         textPaint.setTextSize(40f);
         textPaint.setTextAlign(Paint.Align.CENTER);
@@ -320,6 +321,23 @@ public class FlowWaveView extends View {
             canvas.rotate(rotateAngle);
         }
         canvas.restore();
+    }
+
+    //画圆形刻度第三种
+    private void drawScaleTest1(Canvas canvas) {
+        Paint mPaint = new Paint();
+        mPaint.setStyle(Paint.Style.STROKE);
+        mPaint.setAntiAlias(true);
+        //绘制5px的实线,再绘制5px的透明 从0位置开始
+        DashPathEffect dashPathEffect2 = new DashPathEffect(new float[]{5, 5}, 0);
+        mPaint.setPathEffect(dashPathEffect2);
+        mPaint.setStrokeWidth(30);
+        final float radius = 200f;
+        int[] colors = {Color.GRAY, Color.WHITE};
+        float[] positions = {0.75f, 1f};
+        SweepGradient gradient1 = new SweepGradient(400, 800, colors, positions);
+        mPaint.setShader(gradient1);
+        canvas.drawCircle(400, 800, radius, mPaint);
     }
 
 }

@@ -1,4 +1,4 @@
-package com.xp.exercise.wave;
+package com.xp.exercise.view;
 
 import android.content.Context;
 import android.graphics.Canvas;

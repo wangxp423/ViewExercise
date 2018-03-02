@@ -26,6 +26,7 @@ public class MainActivity extends Activity implements OnClickListener {
         setContentView(R.layout.activity_main);
         findViewById(R.id.main_canvas).setOnClickListener(this);
         findViewById(R.id.main_compass).setOnClickListener(this);
+        findViewById(R.id.main_oclock).setOnClickListener(this);
         findViewById(R.id.main_scroller).setOnClickListener(this);
         findViewById(R.id.main_listview_header).setOnClickListener(this);
         findViewById(R.id.main_visible).setOnClickListener(this);
@@ -43,7 +44,14 @@ public class MainActivity extends Activity implements OnClickListener {
                 startActivity(new Intent(this, CanvasActivity.class));
                 break;
             case R.id.main_compass:
-                startActivity(new Intent(this, CompassActivity.class));
+                Intent compassIntent = new Intent(this, CompassActivity.class);
+                compassIntent.putExtra(CompassActivity.EXTRA_TYPE, CompassActivity.EXTRA_TYPE_COMPASS);
+                startActivity(compassIntent);
+                break;
+            case R.id.main_oclock:
+                Intent oclockIntent = new Intent(this, CompassActivity.class);
+                oclockIntent.putExtra(CompassActivity.EXTRA_TYPE, CompassActivity.EXTRA_TYPE_OCLOCK);
+                startActivity(oclockIntent);
                 break;
             case R.id.main_scroller:
                 startActivity(new Intent(this, ScrollerTestActivity.class));

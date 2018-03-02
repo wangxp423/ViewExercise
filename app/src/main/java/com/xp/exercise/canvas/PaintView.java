@@ -6,9 +6,12 @@ import android.graphics.BitmapFactory;
 import android.graphics.BitmapShader;
 import android.graphics.Canvas;
 import android.graphics.Color;
+import android.graphics.ComposePathEffect;
 import android.graphics.ComposeShader;
+import android.graphics.DashPathEffect;
 import android.graphics.LinearGradient;
 import android.graphics.Paint;
+import android.graphics.PathDashPathEffect;
 import android.graphics.PorterDuff;
 import android.graphics.RadialGradient;
 import android.graphics.Shader;
@@ -67,9 +70,9 @@ public class PaintView extends View {
 //        Test3(canvas);
 //        Test4(canvas);
 //        Test5(canvas);
-//        Test6(canvas);
+        Test6(canvas);
 //        Test7(canvas);
-        Test8(canvas);
+//        Test8(canvas);
     }
 
     private void Test1(Canvas canvas) {
@@ -107,6 +110,7 @@ public class PaintView extends View {
         canvas.drawRect(200, 800, 600, 1200, paint);
     }
 
+    //放射状梯度渐变
     private void Test4(Canvas canvas) {
         final float radius = 200f;
         RadialGradient gradient = new RadialGradient(400, 400, radius, Color.GREEN, Color.BLACK, Shader.TileMode.CLAMP);
@@ -121,6 +125,7 @@ public class PaintView extends View {
         canvas.drawCircle(400, 800, radius, paint);
     }
 
+    //扫描渐变
     private void Test5(Canvas canvas) {
         final float radius = 200f;
         SweepGradient gradient = new SweepGradient(400, 400, Color.GREEN, Color.RED);
@@ -135,19 +140,23 @@ public class PaintView extends View {
         canvas.drawCircle(400, 800, radius, paint);
     }
 
+    //扫描渐变圆环
     private void Test6(Canvas canvas) {
-        final float radius = 200f;
-        SweepGradient gradient = new SweepGradient(400, 400, Color.GREEN, Color.RED);
-        Paint paint = new Paint();
-        paint.setShader(gradient);
-        canvas.drawCircle(400, 400, radius, paint);
-
-        int[] colors = {Color.GREEN, Color.GRAY, Color.RED, Color.BLUE};
-        float[] positions = {0f, 0.5f, 0.75f, 1f};
-        SweepGradient gradient1 = new SweepGradient(400, 800, colors, positions);
-        paint.setShader(gradient1);
-        canvas.drawCircle(400, 800, radius, paint);
         canvas.save();
+        Paint mPaint = new Paint();
+        mPaint.setStyle(Paint.Style.STROKE);
+        mPaint.setAntiAlias(true);
+        //绘制5px的实线,再绘制5px的透明 从0位置开始
+        DashPathEffect dashPathEffect2 = new DashPathEffect(new float[]{5, 5}, 0);
+        mPaint.setPathEffect(dashPathEffect2);
+        mPaint.setStrokeWidth(30);
+        final float radius = 200f;
+        int[] colors = {Color.GRAY, Color.WHITE};
+        float[] positions = {0.75f, 1f};
+        SweepGradient gradient1 = new SweepGradient(400, 800, colors, positions);
+        mPaint.setShader(gradient1);
+        canvas.drawCircle(400, 800, radius, mPaint);
+        canvas.restore();
     }
 
     private void Test7(Canvas canvas) {
