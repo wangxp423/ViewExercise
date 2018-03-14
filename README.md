@@ -1,4 +1,12 @@
 # ViewExercise
-自己写的一些自定义View。水波纹，仿探探搜索，语音输入动画效果,listView滚动Item缓动效果等。
+主要是自己平时工作之余关于View相关的一些练习。功能概览如下图所示：
 ![alt text](https://github.com/wangxp423/ViewExercise/raw/master/main_function.png)
+
+
+欢迎关注个人微信账号：
+![alt text](https://github.com/wangxp423/ViewExercise/raw/master/qrcode.png)
+
+
+个人博客地址：
+https://www.jianshu.com/u/2e90df3acbb1
 
