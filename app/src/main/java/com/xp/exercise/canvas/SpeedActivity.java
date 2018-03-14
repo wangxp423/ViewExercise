@@ -1,4 +1,4 @@
-package com.xp.exercise.activity;
+package com.xp.exercise.canvas;
 
 import java.util.Random;
 

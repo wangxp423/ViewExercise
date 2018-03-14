@@ -27,4 +27,7 @@
         2013年11月1日，Android4.4正式发布，从具体功能上讲，Android4.4提供了各种实用小功能，新的Android系统更智能，添加更多的Emoji表情图案，UI的改进也更现代，如全新的HelloiOS7半透明效果。
         2015年27日，网络安全公司Zimperium研究人员警告，安卓(Android)存在“致命”安全漏洞,黑客发送一封彩信便能在用户毫不知情的情况下完全控制手机。</string>
 
+
+    <string name="my_blog">https://www.jianshu.com/users/2e90df3acbb1/timeline</string>
+    <string name="my_github">https://github.com/wangxp423</string>
 </resources>

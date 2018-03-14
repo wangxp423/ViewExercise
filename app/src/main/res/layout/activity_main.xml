@@ -16,7 +16,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="40dip"
                 android:layout_margin="5dp"
-                android:background="@drawable/btn_ripple_blue"
+                android:background="@color/tv_tips4"
                 android:elevation="2dp"
                 android:gravity="center"
                 android:text="Canvas,Path,贝塞尔曲线" />
@@ -32,7 +32,7 @@
                     android:layout_height="40dip"
                     android:layout_margin="5dp"
                     android:layout_weight="1"
-                    android:background="@drawable/btn_ripple_blue"
+                    android:background="@color/tv_tips4"
                     android:elevation="2dp"
                     android:gravity="center"
                     android:text="仿小米指南针" />
@@ -43,7 +43,7 @@
                     android:layout_height="40dip"
                     android:layout_margin="5dp"
                     android:layout_weight="1"
-                    android:background="@drawable/btn_ripple_blue"
+                    android:background="@color/tv_tips4"
                     android:elevation="2dp"
                     android:gravity="center"
                     android:text="仿小米时针" />
@@ -55,7 +55,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="40dip"
                 android:layout_margin="5dp"
-                android:background="@drawable/btn_ripple_blue"
+                android:background="@color/tv_tips4"
                 android:elevation="2dp"
                 android:gravity="center"
                 android:text="Scroller 使用效果研究" />
@@ -65,7 +65,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="40dip"
                 android:layout_margin="5dp"
-                android:background="@drawable/btn_ripple_blue"
+                android:background="@color/tv_tips4"
                 android:elevation="2dp"
                 android:gravity="center"
                 android:text="ListView 下拉头部变大" />
@@ -75,7 +75,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="40dip"
                 android:layout_margin="5dp"
-                android:background="@drawable/btn_ripple_blue"
+                android:background="@color/tv_tips4"
                 android:elevation="2dp"
                 android:gravity="center"
                 android:text="揭露效果,指定定制转化，曲线运动" />
@@ -85,7 +85,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="40dip"
                 android:layout_margin="5dp"
-                android:background="@drawable/btn_ripple_blue"
+                android:background="@color/tv_tips4"
                 android:elevation="2dp"
                 android:gravity="center"
                 android:text="寺库语音搜素 使用效果研究" />
@@ -95,7 +95,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="40dip"
                 android:layout_margin="5dp"
-                android:background="@drawable/btn_ripple_blue"
+                android:background="@color/tv_tips4"
                 android:elevation="2dp"
                 android:gravity="center"
                 android:text="点击  雷达搜索" />
@@ -105,7 +105,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="40dip"
                 android:layout_margin="5dp"
-                android:background="@drawable/btn_ripple_blue"
+                android:background="@color/tv_tips4"
                 android:elevation="2dp"
                 android:gravity="center"
                 android:text="水波纹  雷达搜索" />
@@ -115,7 +115,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="40dip"
                 android:layout_margin="5dp"
-                android:background="@drawable/btn_ripple_blue"
+                android:background="@color/tv_tips4"
                 android:elevation="2dp"
                 android:gravity="center"
                 android:text="listview item 缓动效果" />
@@ -125,10 +125,20 @@
                 android:layout_width="fill_parent"
                 android:layout_height="40dip"
                 android:layout_margin="5dp"
-                android:background="@drawable/btn_ripple_blue"
+                android:background="@color/tv_tips4"
                 android:elevation="2dp"
                 android:gravity="center"
                 android:text="Toolbar 研究" />
+
+            <TextView
+                android:id="@+id/main_statusbar"
+                android:layout_width="fill_parent"
+                android:layout_height="40dip"
+                android:layout_margin="5dp"
+                android:background="@color/tv_tips4"
+                android:elevation="2dp"
+                android:gravity="center"
+                android:text="Statusbar 研究" />
         </LinearLayout>
     </ScrollView>
 

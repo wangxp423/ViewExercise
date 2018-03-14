@@ -8,26 +8,19 @@
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme.NoActionBar">
         <activity
-            android:name=".MainActivity"
-            android:theme="@style/AppTheme"
+            android:name=".WelcomActivity"
+            android:theme="@style/fullScreen"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-            <intent-filter>
-                <data
-                    android:host="afs.com.afs"
-                    android:scheme="http" />
-                <action android:name="android.intent.action.VIEW" />
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-            </intent-filter>
         </activity>
-        <activity android:name=".activity.CanvasActivity"></activity>
-        <activity android:name=".activity.CompassActivity"></activity>
+        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".canvas.CanvasActivity"></activity>
+        <activity android:name=".canvas.CompassActivity"></activity>
         <activity android:name=".activity.ScrollerTestActivity"></activity>
         <activity android:name=".activity.PullToChangeHeaderActivity"></activity>
         <activity
@@ -35,9 +28,9 @@
             android:theme="@style/ActivitySwitchExplode"></activity>
         <activity android:name=".activity.SwitchActivity"></activity>
         <activity android:name=".activity.PathMotionActivity"></activity>
-        <activity android:name=".activity.SpeedActivity"></activity>
-        <activity android:name=".activity.RadarSearchActivity"></activity>
-        <activity android:name=".activity.CircleWaveActivity"></activity>
+        <activity android:name=".canvas.SpeedActivity"></activity>
+        <activity android:name=".radar.RadarSearchActivity"></activity>
+        <activity android:name=".canvas.CircleWaveActivity"></activity>
         <activity android:name=".activity.SlowScrollListViewActivity"></activity>
         <activity
             android:name=".toolbar.MainToolbarActivity"
@@ -60,6 +53,12 @@
         <activity
             android:name=".toolbar.TitleImageBehaviorActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".statsbar.MainStatusBarActivity"
+            android:theme="@style/fullScreen_have_text" />
+        <activity
+            android:name=".statsbar.FullScreenHaveStatusActivity"
+            android:theme="@style/fullScreen_have_text" />
     </application>
 
 </manifest>

@@ -1,4 +1,4 @@
-package com.xp.exercise.activity;
+package com.xp.exercise.canvas;
 
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;

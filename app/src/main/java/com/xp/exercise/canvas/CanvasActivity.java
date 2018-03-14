@@ -1,4 +1,4 @@
-package com.xp.exercise.activity;
+package com.xp.exercise.canvas;
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;

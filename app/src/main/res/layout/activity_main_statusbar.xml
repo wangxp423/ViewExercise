@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!--Toolbar-->
+    <!--<include layout="@layout/include_toolbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>-->
+
+    <!--自定义Toolbar-->
+    <!--    <android.support.v7.widget.Toolbar
+            android:id="@+id/my_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:fitsSystemWindows="true"
+            android:minHeight="?attr/actionBarSize"
+            app:contentInsetStart="0dp">
+
+            <include
+                layout="@layout/include_title_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </android.support.v7.widget.Toolbar>-->
+
+    <!--普通标题栏-->
+    <include
+        layout="@layout/include_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/statusbar_full_hide"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="全屏、不显示状态栏" />
+
+    <Button
+        android:id="@+id/statusbar_full_show"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="全屏、显示状态栏" />
+
+</LinearLayout>

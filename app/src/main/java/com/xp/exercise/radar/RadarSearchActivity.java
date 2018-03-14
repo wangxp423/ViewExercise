@@ -1,4 +1,4 @@
-package com.xp.exercise.activity;
+package com.xp.exercise.radar;
 
 import com.xp.exercise.R;
 import com.xp.exercise.radar.RadarSearchView;
