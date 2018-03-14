@@ -3,7 +3,7 @@
 ![alt text](https://github.com/wangxp423/ViewExercise/raw/master/main_function.png)
 
 
-欢迎关注个人微信账号：
+欢迎关注个人微信公众账号账号：
 ![alt text](https://github.com/wangxp423/ViewExercise/raw/master/qrcode.jpg)
 
 
