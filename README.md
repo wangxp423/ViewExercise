@@ -4,7 +4,7 @@
 
 
 欢迎关注个人微信账号：
-![alt text](https://github.com/wangxp423/ViewExercise/raw/master/qrcode.png)
+![alt text](https://github.com/wangxp423/ViewExercise/raw/master/qrcode.jpg)
 
 
 个人博客地址：
