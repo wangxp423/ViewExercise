@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.xp.exercise.R;
+import com.xp.exercise.statsbar.base.StatusBarBaseActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -68,6 +69,9 @@ public class MainStatusBarActivity extends StatusBarBaseActivity implements View
                 break;
             case R.id.statusbar_change_text_color2:
                 startActivity(new Intent(MainStatusBarActivity.this, StatusBarTextColor2Activity.class));
+                break;
+            case R.id.statusbar_with_fragment:
+                startActivity(new Intent(MainStatusBarActivity.this, FragmentStatusbarActivity.class));
                 break;
         }
     }

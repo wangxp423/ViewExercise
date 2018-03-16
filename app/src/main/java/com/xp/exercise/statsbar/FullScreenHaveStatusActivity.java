@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 
 import com.xp.exercise.R;
+import com.xp.exercise.statsbar.base.StatusBarBaseActivity;
 
 /**
  * @类描述：全屏 显示状态栏

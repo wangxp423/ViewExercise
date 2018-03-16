@@ -53,13 +53,13 @@
         android:id="@+id/statusbar_change_text_color"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="改变状态栏字体颜色(适配白底标题栏)" />
+        android:text="适配白底标题栏(方案一)改变状态栏字体颜色" />
 
     <Button
         android:id="@+id/statusbar_change_text_color2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="适配白底标题栏(方案二)" />
+        android:text="适配白底标题栏(方案二)顶部添加View,改变View颜色" />
 
     <Button
         android:id="@+id/statusbar_with_fragment"
