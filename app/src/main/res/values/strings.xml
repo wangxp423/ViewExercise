@@ -28,6 +28,6 @@
         2015年27日，网络安全公司Zimperium研究人员警告，安卓(Android)存在“致命”安全漏洞,黑客发送一封彩信便能在用户毫不知情的情况下完全控制手机。</string>
 
 
-    <string name="my_blog">https://www.jianshu.com/users/2e90df3acbb1/timeline</string>
+    <string name="my_blog">http://blog.csdn.net/wangxp423</string>
     <string name="my_github">https://github.com/wangxp423</string>
 </resources>

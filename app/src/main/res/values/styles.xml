@@ -37,7 +37,7 @@
         <!--<item name="android:windowSharedElementExitTransition">-->
         <!--@transitactivity_switch_explodelode</item>-->
     </style>
-    
+
     <!-- ListView用style -->
     <style name="List">
 		<item name="android:background">@null</item>
@@ -52,5 +52,26 @@
 		<item name="android:headerDividersEnabled">false</item>
 		<item name="android:smoothScrollbar">true</item>
 	</style>
+
+    <!-- 设置右滑主题 -->
+    <style name="AppSwipeTheme" parent="AppTheme.NoActionBar">
+        <item name="android:windowAnimationStyle">@style/HoloThemeActivityAnimation</item>
+        <!-- 设置背景透明，右滑时才能看到上一个界面，否则会看到黑屏效果-->，
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <!--Activity退出动画-->
+    <style name="HoloThemeActivityAnimation" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/activity_open_enter</item>
+        <item name="android:activityOpenExitAnimation">@anim/activity_open_exit</item>
+        <item name="android:activityCloseEnterAnimation">@anim/activity_close_enter</item>
+        <item name="android:activityCloseExitAnimation">@anim/activity_close_exit</item>
+    </style>
+
+    <!--主界面单独设置以下主题，不透明,否则右滑不是显示上一个页面而是直接显示桌面了~-->
+    <style name="AppThemeNoTranslucent" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+    </style>
 
 </resources>

@@ -55,10 +55,16 @@
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".statsbar.MainStatusBarActivity"
-            android:theme="@style/fullScreen_have_text" />
+            android:theme="@style/AppSwipeTheme" />
         <activity
             android:name=".statsbar.FullScreenHaveStatusActivity"
-            android:theme="@style/fullScreen_have_text" />
+            android:theme="@style/AppSwipeTheme" />
+        <activity
+            android:name=".statsbar.StatusBarTextColorActivity"
+            android:theme="@style/AppSwipeTheme" />
+        <activity
+            android:name=".statsbar.StatusBarTextColor2Activity"
+            android:theme="@style/AppSwipeTheme" />
     </application>
 
 </manifest>
