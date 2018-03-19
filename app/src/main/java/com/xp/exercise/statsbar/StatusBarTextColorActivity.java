@@ -2,6 +2,8 @@ package com.xp.exercise.statsbar;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.view.View;
+import android.widget.Button;
 
 import com.xp.exercise.R;
 import com.xp.exercise.statsbar.base.StatusBarBaseActivity;
@@ -16,6 +18,7 @@ import com.xp.exercise.statsbar.base.StatusBarBaseActivity;
  */
 
 public class StatusBarTextColorActivity extends StatusBarBaseActivity {
+    private boolean isChange;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,5 +27,21 @@ public class StatusBarTextColorActivity extends StatusBarBaseActivity {
         //因修改状态栏字体颜色只支持6.0以上系统，适配低版本的时候，我们修改状态栏颜色为浅灰色(大部分APP适配规则)
         int statusBarColor = 0xffcccccc;
         setColorStatusBar(true, statusBarColor);
+
+        //测试加载完成以后再次修改状态栏字体颜色
+        Button testButton = (Button) findViewById(R.id.btn_statusbar_text_test);
+        testButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (!isChange) {
+                    isChange = true;
+                    setColorStatusBar(false, 0);
+                } else {
+                    int statusBarColor = 0xffcccccc;
+                    setColorStatusBar(true, statusBarColor);
+                    isChange = false;
+                }
+            }
+        });
     }
 }

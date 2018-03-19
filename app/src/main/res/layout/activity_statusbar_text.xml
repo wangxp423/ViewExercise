@@ -21,4 +21,12 @@
             android:layout_gravity="center" />
     </FrameLayout>
 
+    <Button
+        android:id="@+id/btn_statusbar_text_test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_gravity="center"
+        android:text="测试按钮" />
+
 </LinearLayout>

@@ -50,43 +50,37 @@ public class CompatStatusBarActivity extends StatusBarBaseActivity {
      * 根据版本不同 修改添加View的颜色
      * 适配白底标题栏(方案二)顶部添加View,改变View颜色
      * 适配方案2, 4.4以下的不适配，4.4-6.0修改View颜色为浅灰色，6.0以上修改View颜色为白色，修改状态栏字体颜色
+     *
      * @param isLight 标题栏颜色是否为浅色(白色)
      */
     protected void setViewColorStatusBar(boolean isLight, int statusBarPlaceColor) {
-        if (isLight) {
-            //6.0+ 小米 魅族 可以直接适配
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M || OsUtil.isMIUI() || OsUtil.isFlyme()) {
-                setStatusBarTextDark(true);
+        //6.0+ 小米 魅族 可以直接适配 一般情况下6.0以上都是透明
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M || OsUtil.isMIUI() || OsUtil.isFlyme()) {
+            setStatusBarTextDark(isLight);
+            setStatusBarPlaceColor(statusBarPlaceColor);
+        } else {
+            if (statusBarPlaceColor == Color.WHITE) {
+                statusBarPlaceColor = 0xffcccccc;
+            }
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) { //4.4以上修改为浅灰色
                 setStatusBarPlaceColor(statusBarPlaceColor);
-            } else {
-                if (statusBarPlaceColor == Color.WHITE) {
-                    statusBarPlaceColor = 0xffcccccc;
-                }
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) { //4.4以上修改为浅灰色
-                    setStatusBarPlaceColor(statusBarPlaceColor);
-                } else { //4.4以下不适配
-                    if (mViewStatusBarPlace.getVisibility() == View.VISIBLE) {
-                        mViewStatusBarPlace.setVisibility(View.GONE);
-                    }
-                }
+            } else { //4.4以下不适配
+                setStatusBarPlaceVisible(false);
             }
         }
     }
 
-    private void setStatusBarPlaceColor(int statusColor) {
+    protected void setStatusBarPlaceVisible(boolean isVisible) {
+        if (isVisible) {
+            mViewStatusBarPlace.setVisibility(View.VISIBLE);
+        } else {
+            mViewStatusBarPlace.setVisibility(View.GONE);
+        }
+    }
+
+    protected void setStatusBarPlaceColor(int statusColor) {
         if (mViewStatusBarPlace != null) {
             mViewStatusBarPlace.setBackgroundColor(statusColor);
         }
     }
-
-    public int getStatusBarHeight() {
-        int statusBarHeight = 0;
-        int resourceId = getResources().getIdentifier("status_bar_height", "dimen", "android");
-        if (resourceId > 0) {
-            statusBarHeight = getResources().getDimensionPixelSize(resourceId);
-        }
-        return statusBarHeight;
-    }
-
-
 }
