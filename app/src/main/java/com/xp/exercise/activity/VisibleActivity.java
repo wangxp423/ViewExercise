@@ -71,7 +71,7 @@ public class VisibleActivity extends AppCompatActivity implements View.OnClickLi
             case R.id.iv_visible_meinv:
                 Intent intent = new Intent(this, SwitchActivity.class);
                 //启动一个View变化
-//                startActivity(intent,ActivityOptions.makeSceneTransitionAnimation(this,ivMeinv,"sharedView").toBundle());
+                startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(this, ivMeinv, "sharedView").toBundle());
                 Pair first = new Pair<>(ivMeinv, ViewCompat.getTransitionName(ivMeinv));
                 Pair second = new Pair<>(ivSecond, ViewCompat.getTransitionName(ivSecond));
                 ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(this, first, second);
