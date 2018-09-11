@@ -7,9 +7,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.ViewGroup;
 import android.view.Window;
-import android.view.WindowManager;
 import android.widget.TextView;
 
 import com.xp.exercise.activity.PullToChangeHeaderActivity;
@@ -20,9 +18,11 @@ import com.xp.exercise.canvas.CanvasActivity;
 import com.xp.exercise.canvas.CircleWaveActivity;
 import com.xp.exercise.canvas.CompassActivity;
 import com.xp.exercise.canvas.SpeedActivity;
+import com.xp.exercise.ontouch.MainTouchActivity;
 import com.xp.exercise.radar.RadarSearchActivity;
 import com.xp.exercise.statsbar.MainStatusBarActivity;
 import com.xp.exercise.toolbar.MainToolbarActivity;
+import com.xp.exercise.viewgroup.MainViewGroupActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -53,6 +53,10 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
     TextView mainToolbar;
     @BindView(R.id.main_statusbar)
     TextView mainStatusbar;
+    @BindView(R.id.main_viewgroup)
+    TextView mainViewGroup;
+    @BindView(R.id.main_ontouch)
+    TextView mainOnTouch;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,6 +76,8 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
         mainSlowScroll.setOnClickListener(this);
         mainToolbar.setOnClickListener(this);
         mainStatusbar.setOnClickListener(this);
+        mainViewGroup.setOnClickListener(this);
+        mainOnTouch.setOnClickListener(this);
         setRippleBg();
     }
 
@@ -119,6 +125,12 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
             case R.id.main_statusbar:
                 startActivity(new Intent(this, MainStatusBarActivity.class));
                 break;
+            case R.id.main_viewgroup:
+                startActivity(new Intent(this, MainViewGroupActivity.class));
+                break;
+            case R.id.main_ontouch:
+                startActivity(new Intent(this, MainTouchActivity.class));
+                break;
             default:
                 break;
         }
@@ -138,6 +150,8 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
             mainSlowScroll.setBackground(getResources().getDrawable(R.drawable.btn_ripple_blue));
             mainToolbar.setBackground(getResources().getDrawable(R.drawable.btn_ripple_blue));
             mainStatusbar.setBackground(getResources().getDrawable(R.drawable.btn_ripple_blue));
+            mainViewGroup.setBackground(getResources().getDrawable(R.drawable.btn_ripple_blue));
+            mainOnTouch.setBackground(getResources().getDrawable(R.drawable.btn_ripple_blue));
         }
     }
 }

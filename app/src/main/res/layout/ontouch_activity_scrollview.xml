@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.xp.exercise.ontouch.view.NormalScrollView
+        android:id="@+id/touch_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.xp.exercise.ontouch.view.NormalRecyclerView
+                android:id="@+id/touch_scrollview_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"></com.xp.exercise.ontouch.view.NormalRecyclerView>
+
+            <include layout="@layout/item_touch_recycler" />
+
+            <include layout="@layout/item_touch_recycler" />
+
+            <include layout="@layout/item_touch_recycler" />
+
+            <include layout="@layout/item_touch_recycler" />
+
+            <include layout="@layout/item_touch_recycler" />
+
+            <include layout="@layout/item_touch_recycler" />
+
+            <include layout="@layout/item_touch_recycler" />
+
+            <include layout="@layout/item_touch_recycler" />
+
+            <include layout="@layout/item_touch_recycler" />
+
+            <include layout="@layout/item_touch_recycler" />
+
+            <include layout="@layout/item_touch_recycler" />
+
+            <include layout="@layout/item_touch_recycler" />
+
+            <include layout="@layout/item_touch_recycler" />
+
+            <include layout="@layout/item_touch_recycler" />
+
+            <include layout="@layout/item_touch_recycler" />
+
+            <include layout="@layout/item_touch_recycler" />
+
+            <include layout="@layout/item_touch_recycler" />
+
+            <include layout="@layout/item_touch_recycler" />
+
+            <include layout="@layout/item_touch_recycler" />
+
+            <include layout="@layout/item_touch_recycler" />
+
+            <include layout="@layout/item_touch_recycler" />
+
+            <include layout="@layout/item_touch_recycler" />
+
+            <include layout="@layout/item_touch_recycler" />
+
+            <include layout="@layout/item_touch_recycler" />
+        </LinearLayout>
+    </com.xp.exercise.ontouch.view.NormalScrollView>
+</LinearLayout>

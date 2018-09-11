@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.xp.exercise.ontouch.view.NormalRecyclerView
+        android:id="@+id/touch_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></com.xp.exercise.ontouch.view.NormalRecyclerView>
+
+</LinearLayout>

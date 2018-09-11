@@ -24,7 +24,8 @@
             android:layout_height="wrap_content"
             android:text="btn in layer1" />
     </com.xp.exercise.scroller.MyLinearLayout>
-    <com.xp.exercise.scroller.MyLinearLayout
+
+    <com.xp.exercise.scroller.MyLinearLayout
         android:id="@+id/scroller_layout2"
         android:layout_width="fill_parent"
         android:layout_height="250dip"
@@ -36,6 +37,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="btn in layer2" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_orange_light"
+            android:text="滚动" />
     </com.xp.exercise.scroller.MyLinearLayout>
 
 </LinearLayout>

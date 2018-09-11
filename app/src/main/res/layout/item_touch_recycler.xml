@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.xp.exercise.ontouch.view.NormalView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tv_touch_recycler_item_content"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:layout_gravity="center"
+    android:background="@drawable/btn_white_gray_selector"
+    android:text="View"
+    android:gravity="center"
+    android:textSize="18dp">
+
+</com.xp.exercise.ontouch.view.NormalView>

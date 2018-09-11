@@ -139,6 +139,26 @@
                 android:elevation="2dp"
                 android:gravity="center"
                 android:text="Statusbar 研究" />
+
+            <TextView
+                android:id="@+id/main_viewgroup"
+                android:layout_width="fill_parent"
+                android:layout_height="40dip"
+                android:layout_margin="5dp"
+                android:background="@color/tv_tips4"
+                android:elevation="2dp"
+                android:gravity="center"
+                android:text="ViewGroup 自定义" />
+
+            <TextView
+                android:id="@+id/main_ontouch"
+                android:layout_width="fill_parent"
+                android:layout_height="40dip"
+                android:layout_margin="5dp"
+                android:background="@color/tv_tips4"
+                android:elevation="2dp"
+                android:gravity="center"
+                android:text="Touch 事件传递研究" />
         </LinearLayout>
     </ScrollView>
 

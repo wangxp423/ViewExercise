@@ -11,8 +11,8 @@
         android:theme="@style/AppTheme.NoActionBar">
         <activity
             android:name=".WelcomActivity"
-            android:theme="@style/fullScreen"
-            android:label="@string/app_name">
+            android:label="@string/app_name"
+            android:theme="@style/fullScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -68,6 +68,25 @@
         <activity
             android:name=".statsbar.FragmentStatusbarActivity"
             android:theme="@style/AppSwipeTheme" />
+        <activity
+            android:name=".viewgroup.MainViewGroupActivity"
+            android:theme="@style/AppSwipeTheme" />
+        <activity
+            android:name=".viewgroup.CustomViewGroupActivity"
+            android:theme="@style/AppSwipeTheme" />
+        <activity
+            android:name=".ontouch.MainTouchActivity"
+            android:theme="@style/AppSwipeTheme" />
+        <activity
+            android:name=".ontouch.TouchNormalActivity"
+            android:theme="@style/AppSwipeTheme" />
+        <activity
+            android:name=".ontouch.TouchRecyclerActivity"
+            android:theme="@style/AppSwipeTheme" />
+        <activity
+            android:name=".ontouch.TouchScrollViewActivity"
+            android:theme="@style/AppSwipeTheme" />
+
     </application>
 
 </manifest>

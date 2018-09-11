@@ -4,9 +4,6 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.animation.AccelerateDecelerateInterpolator;
-import android.view.animation.AccelerateInterpolator;
-import android.view.animation.DecelerateInterpolator;
-import android.view.animation.LinearInterpolator;
 import android.widget.LinearLayout;
 import android.widget.Scroller;
 
@@ -30,8 +27,8 @@ public class MyLinearLayout extends LinearLayout{
     private void initScroller(Context context){
 //        mScroller = new Scroller(context,new LinearInterpolator());//匀速
 //        mScroller = new Scroller(context,new AccelerateInterpolator());//加速
-//        mScroller = new Scroller(context,new DecelerateInterpolator());//加速
-        mScroller = new Scroller(context,new AccelerateDecelerateInterpolator());//加速
+//        mScroller = new Scroller(context,new DecelerateInterpolator());//减速
+        mScroller = new Scroller(context, new AccelerateDecelerateInterpolator());//先加速后减速
     }
     
     public void startScroller(int dx,int dy,int duration){

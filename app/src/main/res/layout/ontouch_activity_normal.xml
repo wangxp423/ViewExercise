@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#55aaaa"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Activity"
+        android:textColor="#fff"
+        android:textSize="18dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.xp.exercise.ontouch.view.NormalViewGroup
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:background="#aaaa3344"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="ViewGroup"
+            android:textColor="#fff"
+            android:textSize="18dp" />
+
+        <com.xp.exercise.ontouch.view.NormalView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:background="@drawable/btn_blue_red_selector"
+            android:gravity="center"
+            android:text="View"
+            android:textColor="#ffffff"
+            android:textSize="18dp" />
+    </com.xp.exercise.ontouch.view.NormalViewGroup>
+
+</android.support.constraint.ConstraintLayout>
