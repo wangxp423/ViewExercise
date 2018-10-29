@@ -58,20 +58,6 @@ public abstract class StatusBarBaseActivity extends SwipeBackActivity {
     }
 
     /**
-     * 获取状态栏的高度
-     *
-     * @return
-     */
-    protected int getStatusBarHeight() {
-        int statusBarHeight = 0;
-        int resourceId = getResources().getIdentifier("status_bar_height", "dimen", "android");
-        if (resourceId > 0) {
-            statusBarHeight = getResources().getDimensionPixelSize(resourceId);
-        }
-        return statusBarHeight;
-    }
-
-    /**
      * 根据版本不同设置状态栏颜色不同
      * 适适配白底标题栏(方案一)改变状态栏字体颜色
      * 适配方案1, 4.4以下的不适配，4.4-5.0的也不适配，5.0-6.0修改状态栏颜色为浅灰色，6.0以上修改状态栏字体颜色

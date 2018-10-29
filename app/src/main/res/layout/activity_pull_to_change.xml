@@ -3,11 +3,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
-    <com.xp.exercise.listview.ListViewForScrollView
+
+    <com.xp.exercise.listview.widget.ListViewForScrollView
         android:id="@+id/pull_to_change_listview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layoutAnimation="@anim/listview_animation">
-    </com.xp.exercise.listview.ListViewForScrollView>
+        android:layoutAnimation="@anim/listview_animation"></com.xp.exercise.listview.widget.ListViewForScrollView>
 
 </LinearLayout>

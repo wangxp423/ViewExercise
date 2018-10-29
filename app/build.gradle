@@ -5,7 +5,7 @@ android {
 
     defaultConfig {
         applicationId "com.xp.exercise"
-        minSdkVersion 18
+        minSdkVersion 21
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
@@ -30,4 +30,5 @@ dependencies {
     implementation 'com.jakewharton:butterknife:8.8.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
     implementation 'me.imid.swipebacklayout.lib:library:1.1.0'
+    implementation 'com.google.code.gson:gson:2.8.5'
 }

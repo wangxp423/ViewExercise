@@ -2,9 +2,11 @@
 <resources>
     <dimen name="sound_wave_line_width">2px</dimen>
     <dimen name="sound_wave_line_space">6.5dp</dimen>
-    <dimen name="radar_head_image_width">60dip</dimen>
-    <dimen name="radar_circle_width">4dip</dimen>
-    <dimen name="image_width">120dip</dimen>
+    <dimen name="radar_head_image_width">60dp</dimen>
+    <dimen name="radar_circle_width">4dp</dimen>
+    <dimen name="image_width">120dp</dimen>
     <dimen name="image_final_width">32dp</dimen>
     <dimen name="title_height">49dp</dimen>
+    <dimen name="margin_left_normal">10dp</dimen>
+    <dimen name="margin_right_normal">10dp</dimen>
 </resources>

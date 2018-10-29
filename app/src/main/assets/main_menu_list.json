@@ -1,0 +1,240 @@
+{
+  "datas": [
+    {
+      "id": 0,
+      "tag": "custom_view_draw",
+      "title": "自定义View - onDraw()",
+      "childs": [
+        {
+          "id": 0,
+          "tag": "draw_canvas",
+          "title": "onDraw() --> Canvas"
+        },
+        {
+          "id": 1,
+          "tag": "draw_paint",
+          "title": "onDraw() --> Paint"
+        },
+        {
+          "id": 2,
+          "tag": "draw_path",
+          "title": "onDraw() --> Path"
+        },
+        {
+          "id": 3,
+          "tag": "draw_bezier",
+          "title": "onDraw() --> 贝塞尔曲线"
+        },
+        {
+          "id": 4,
+          "tag": "draw_drag_bezier",
+          "title": "仿QQ拖拽小圆点"
+        },
+        {
+          "id": 5,
+          "tag": "draw_collection",
+          "title": "水波纹进度，刻度百分比"
+        },
+        {
+          "id": 6,
+          "tag": "draw_secoo",
+          "title": "仿寺库语音搜索"
+        },
+        {
+          "id": 7,
+          "tag": "draw_radar_search",
+          "title": "雷达搜索"
+        },
+        {
+          "id": 8,
+          "tag": "draw_tantan_search",
+          "title": "仿探探首页搜索"
+        },
+        {
+          "id": 9,
+          "tag": "draw_compass",
+          "title": "仿小米指南针"
+        },
+        {
+          "id": 10,
+          "tag": "draw_clock",
+          "title": "仿小米时针"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "tag": "toolbar",
+      "title": "Toolbar配合CoordinatorLayout效果",
+      "childs": [
+        {
+          "id": 0,
+          "tag": "toolbar_scroll",
+          "title": "Scroll"
+        },
+        {
+          "id": 1,
+          "tag": "toolbar_scroll_enteralways",
+          "title": "Scroll-enterAlways"
+        },
+        {
+          "id": 2,
+          "tag": "toolbar_scroll_enteralways_enteralwayscollpased",
+          "title": "Scroll-enterAlways-enteralwaysCollapsed"
+        },
+        {
+          "id": 3,
+          "tag": "toolbar_scroll_exituntilcollapsed",
+          "title": "Scroll-ExitUtilCollapsed"
+        },
+        {
+          "id": 4,
+          "tag": "toolbar_scroll_span",
+          "title": "Scroll-span"
+        },
+        {
+          "id": 5,
+          "tag": "toolbar_collapsing_toolbar",
+          "title": "NormalCollapsingToolbar"
+        },
+        {
+          "id": 6,
+          "tag": "toolbar_collapsing_toolbar_collaps",
+          "title": "CollapsingToolbar-Collaps"
+        },
+        {
+          "id": 7,
+          "tag": "toolbar_behavior_zhihu",
+          "title": "自定义Behavior(仿知乎)"
+        },
+        {
+          "id": 8,
+          "tag": "toolbar_behavior_baidu",
+          "title": "BottomSheetBehavior(仿百度)"
+        },
+        {
+          "id": 9,
+          "tag": "toolbar_custom_behavior_collection",
+          "title": "折叠移动头像到标题栏"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "tag": "statusbar",
+      "title": "沉浸式状态栏",
+      "childs": [
+        {
+          "id": 0,
+          "tag": "statusbar_full_hide",
+          "title": "全屏、不显示状态栏"
+        },
+        {
+          "id": 1,
+          "tag": "statusbar_full_show",
+          "title": "全屏、显示状态栏"
+        },
+        {
+          "id": 2,
+          "tag": "statusbar_same_title_status",
+          "title": "标题栏和状态栏颜色一致"
+        },
+        {
+          "id": 3,
+          "tag": "statusbar_change_text_color",
+          "title": "适配白底标题栏(方案一)改变状态栏字体颜色"
+        },
+        {
+          "id": 4,
+          "tag": "statusbar_change_text_color2",
+          "title": "适配白底标题栏(方案二)顶部添加View,改变View颜色"
+        },
+        {
+          "id": 5,
+          "tag": "statusbar_with_fragment",
+          "title": "在Fragment中使用"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "tag": "onTouch",
+      "title": "Touch事件传递研究",
+      "childs": [
+        {
+          "id": 0,
+          "tag": "touch_normal",
+          "title": "Activity->ViewGroup->View"
+        },
+        {
+          "id": 1,
+          "tag": "touch_recycler",
+          "title": "Activity->RecyclerView->View"
+        },
+        {
+          "id": 2,
+          "tag": "touch_scrollview",
+          "title": "Activity->RecyclerView->ScrollView->View"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "tag": "listview",
+      "title": "ListView的一些效果研究",
+      "childs": [
+        {
+          "id": 0,
+          "tag": "listview_pull_header",
+          "title": "ListView下拉头部变大"
+        },
+        {
+          "id": 1,
+          "tag": "listview_item_slow",
+          "title": "ListView滑动，Item缓动变化"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "tag": "animator",
+      "title": "动画，转场动画研究",
+      "childs": [
+        {
+          "id": 0,
+          "tag": "animator_scene",
+          "title": "ActivityOptions.makeSceneTransitionAnimation"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "tag": "viewgroup",
+      "title": "自定义ViewGroup",
+      "childs": [
+        {
+          "id": 0,
+          "tag": "viewgroup_test_scroll",
+          "title": "Scroll练习"
+        },
+        {
+          "id": 1,
+          "tag": "viewgroup_view_draghelper",
+          "title": "ViewGroup --> ViewDragHelper练习"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "tag": "viewpager",
+      "title": "ViewPager酷炫效果",
+      "childs": [
+        {
+          "id": 0,
+          "tag": "viewpager_indicate",
+          "title": "ViewPager酷炫滑动指示器"
+        }
+      ]
+    }
+  ]
+}

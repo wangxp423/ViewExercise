@@ -11,6 +11,7 @@ import android.widget.FrameLayout;
 
 import com.xp.exercise.R;
 import com.xp.exercise.statsbar.util.OsUtil;
+import com.xp.exercise.util.UiUtil;
 
 /**
  * @类描述：适配白底标题栏(方案二)顶部添加View,改变View颜色。 基类
@@ -34,7 +35,7 @@ public class CompatStatusBarActivity extends StatusBarBaseActivity {
         mFrameLayoutContent = (FrameLayout) findViewById(R.id.frame_layout_content_place);
 
         ViewGroup.LayoutParams params = mViewStatusBarPlace.getLayoutParams();
-        params.height = getStatusBarHeight();
+        params.height = UiUtil.getStatusBarHeight(this);
         mViewStatusBarPlace.setLayoutParams(params);
     }
 
@@ -44,6 +45,11 @@ public class CompatStatusBarActivity extends StatusBarBaseActivity {
         //contentLayout会将继承自这个Activity的页面的layout添加进去以达到通用的目的
         View contentView = LayoutInflater.from(this).inflate(layoutResID, null);
         mFrameLayoutContent.addView(contentView);
+    }
+
+    @Override
+    public void setContentView(View view) {
+        mFrameLayoutContent.addView(view);
     }
 
     /**

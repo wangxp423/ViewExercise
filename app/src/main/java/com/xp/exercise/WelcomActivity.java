@@ -6,8 +6,9 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.TextView;
+
+import com.xp.exercise.main.MainActivity;
 
 /**
  * @类描述：欢迎页

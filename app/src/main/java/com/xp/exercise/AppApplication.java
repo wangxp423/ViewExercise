@@ -14,10 +14,12 @@ import com.xp.exercise.util.LogUtils;
  */
 
 public class AppApplication extends Application {
+    public static AppApplication INSTANCE;
     @Override
     public void onCreate() {
         super.onCreate();
         CrashCapture.getInstance().init(this);
         LogUtils.init(this);
+        INSTANCE = this;
     }
 }

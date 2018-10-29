@@ -3,13 +3,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
 
-    <com.xp.exercise.radar.CircleRippleView
+    <com.xp.exercise.canvas.widget.CircleRippleView
         android:id="@+id/radar_bg_image"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:src="@drawable/radar_bg" >
-    </com.xp.exercise.radar.CircleRippleView>
+        android:src="@drawable/radar_bg" ></com.xp.exercise.canvas.widget.CircleRippleView>
 
     <ImageView
         android:id="@+id/radar_image"
@@ -18,12 +17,11 @@
         android:layout_centerInParent="true"
         android:src="@drawable/radar" />
 
-    <com.xp.exercise.radar.RadarImageView
+    <com.xp.exercise.canvas.widget.RadarImageView
         android:id="@+id/radar_head_image"
         android:layout_width="@dimen/radar_head_image_width"
         android:layout_height="@dimen/radar_head_image_width"
         android:layout_centerInParent="true"
-        android:src="@drawable/icon_1" >
-    </com.xp.exercise.radar.RadarImageView>
+        android:src="@drawable/icon_1" ></com.xp.exercise.canvas.widget.RadarImageView>
 
 </RelativeLayout>

@@ -22,13 +22,13 @@
             android:text="开始波动动画" />
     </LinearLayout>
 
-    <com.xp.exercise.speed.LineCircleTransitionView
+    <com.xp.exercise.canvas.secoo.LineCircleTransitionView
         android:id="@+id/speed_lct_view"
         android:layout_width="fill_parent"
         android:layout_height="200dp"
         android:background="@android:color/black" />
 
-    <com.xp.exercise.speed.SoundWaveView
+    <com.xp.exercise.canvas.secoo.SoundWaveView
         android:id="@+id/speed_sw_view"
         android:layout_width="fill_parent"
         android:layout_height="100dp"
