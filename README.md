@@ -1,5 +1,13 @@
 # ViewExercise
-主要是自己平时工作之余关于View相关的一些练习。功能概览如下图所示：
+主要是自己平时工作之余关于View相关的一些练习。
+
+> 个人博客地址：
+http://blog.csdn.net/wangxp423
+
+> 欢迎关注个人微信公众账号账号：<br>
+![Image](https://github.com/wangxp423/ViewExercise/raw/master/screenshot/qrcode.jpg)
+
+
 
 # 目录截图
 <img src="https://github.com/wangxp423/ViewExercise/raw/master/screenshot/main_function.png" width="30%" height="30%" />
@@ -76,7 +84,7 @@
 #### 1)，Fragment中适配沉浸式状态栏
 <img src="https://github.com/wangxp423/ViewExercise/raw/master/screenshot/statusbar/statusbar_fragment.jpg" width="50%" height="50%" />
 
-相关实现：
+相关博客：<br>
 
 fitSystemWindow属性对于状态栏的作用：https://blog.csdn.net/wangxp423/article/details/79564244<br>
 使用fitSystemWindow属性实现"沉浸式"状态栏：https://blog.csdn.net/wangxp423/article/details/79566465<br>
@@ -88,16 +96,12 @@ Fragment切换中适配"沉浸式状态栏"：https://blog.csdn.net/wangxp423/ar
 ## 五，Touch事件传递研究
 <img src="https://github.com/wangxp423/ViewExercise/raw/master/screenshot/touch/touch_main.jpg" width="30%" height="30%" />
 
-相关实现：<br>
+相关博客：<br>
+
 可能是最详细的Android点击事件处理详解：https://blog.csdn.net/wangxp423/article/details/82500875<br>
 可能是最详细的Android点击事件处理详解(二)：https://blog.csdn.net/wangxp423/article/details/82591929<br>
 可能是最详细的Android点击事件处理详解(三)：https://blog.csdn.net/wangxp423/article/details/82625368<br>
 
 ---
 
-欢迎关注个人微信公众账号账号：
-![Image](https://github.com/wangxp423/ViewExercise/raw/master/screenshot/qrcode.jpg)
-
-个人博客地址：
-http://blog.csdn.net/wangxp423
 
