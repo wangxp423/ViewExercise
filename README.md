@@ -11,11 +11,11 @@
 
 
 #### 1)，Canvas
-<img src="https://github.com/wangxp423/ViewExercise/raw/master/screenshot/draw/canvas_canvas.jpg" width="30%" height="30%" />
+<img src="https://github.com/wangxp423/ViewExercise/raw/master/screenshot/draw/canvas_canvas.jpg" width="50%" height="50%" />
 
 
 #### 2)，Bezier贝塞尔曲线
-<img src="https://github.com/wangxp423/ViewExercise/raw/master/screenshot/draw/canvas_bezier.jpg" width="30%" height="30%" />
+<img src="https://github.com/wangxp423/ViewExercise/raw/master/screenshot/draw/canvas_bezier.jpg" width="50%" height="50%" />
 
 #### 3)，贝塞尔之 拖拽小圆点
 <img src="https://github.com/wangxp423/ViewExercise/raw/master/screenshot/draw/canvas_drag_red.gif" width="30%" height="30%" />
@@ -74,7 +74,7 @@
 <img src="https://github.com/wangxp423/ViewExercise/raw/master/screenshot/statusbar/statusbar_main.png" width="30%" height="30%" />
 
 #### 1)，Fragment中适配沉浸式状态栏
-<img src="https://github.com/wangxp423/ViewExercise/raw/master/screenshot/statusbar/statusbar_fragment.jpg" width="30%" height="30%" />
+<img src="https://github.com/wangxp423/ViewExercise/raw/master/screenshot/statusbar/statusbar_fragment.jpg" width="50%" height="50%" />
 
 相关实现：
 
