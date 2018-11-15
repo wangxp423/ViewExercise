@@ -3,6 +3,7 @@
 
 # 目录截图
 ![Image](https://github.com/wangxp423/ViewExercise/raw/master/screenshot/main_function.png)
+<img src="https://github.com/wangxp423/ViewExercise/raw/master/screenshot/main_function.png" width="50%" height="50%" />
 
 ---
 
