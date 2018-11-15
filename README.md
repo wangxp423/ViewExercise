@@ -24,7 +24,7 @@
 <img src="https://github.com/wangxp423/ViewExercise/raw/master/screenshot/draw/canvas_demo.gif" width="30%" height="30%" />
 
 #### 5)，Canvas水波纹
-<img src="https://github.com/wangxp423/ViewExercise/raw/master/screenshot/draw/water_wave.gif" width="60%" height="60%" />
+<img src="https://github.com/wangxp423/ViewExercise/raw/master/screenshot/draw/water_wave.gif"/>
 
 #### 6)，Canvas水波纹刻度百分比
 <img src="https://github.com/wangxp423/ViewExercise/raw/master/screenshot/draw/canvas_wave.gif" width="60%" height="60%" />
