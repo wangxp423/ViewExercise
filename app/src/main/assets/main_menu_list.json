@@ -22,41 +22,51 @@
         },
         {
           "id": 3,
-          "tag": "draw_bezier",
-          "title": "onDraw() --> 贝塞尔曲线"
+          "tag": "draw_two_bezier",
+          "title": "onDraw() --> 二阶贝塞尔曲线"
         },
         {
           "id": 4,
+          "tag": "draw_three_bezier",
+          "title": "onDraw() --> 三阶贝塞尔曲线"
+        },
+        {
+          "id": 5,
+          "tag": "draw_demo",
+          "title": "onDraw() --> 综合练习"
+        },
+        {
+          "id": 6,
           "tag": "draw_drag_bezier",
           "title": "仿QQ拖拽小圆点"
         },
         {
-          "id": 5,
+          "id": 7,
           "tag": "draw_collection",
           "title": "水波纹进度，刻度百分比"
         },
         {
-          "id": 6,
+          "id": 8,
           "tag": "draw_secoo",
           "title": "仿寺库语音搜索"
         },
         {
-          "id": 7,
+          "id": 9,
           "tag": "draw_radar_search",
           "title": "雷达搜索"
         },
         {
-          "id": 8,
+          "id": 10,
           "tag": "draw_tantan_search",
           "title": "仿探探首页搜索"
         },
         {
-          "id": 9,
+          "id": 11,
           "tag": "draw_compass",
           "title": "仿小米指南针"
         },
         {
-          "id": 10,
+          "id": 12,
           "tag": "draw_clock",
           "title": "仿小米时针"
         }

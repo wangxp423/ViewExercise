@@ -25,7 +25,9 @@ public class Constant {
     public static final String CUSTOM_VIEW_DRAW_CANVAS = "draw_canvas";
     public static final String CUSTOM_VIEW_DRAW_PAINT = "draw_paint";
     public static final String CUSTOM_VIEW_DRAW_PATH = "draw_path";
-    public static final String CUSTOM_VIEW_DRAW_BEZIER = "draw_bezier";
+    public static final String CUSTOM_VIEW_DRAW_TWO_BEZIER = "draw_two_bezier";
+    public static final String CUSTOM_VIEW_DRAW_THREE_BEZIER = "draw_three_bezier";
+    public static final String CUSTOM_VIEW_DRAW_DEMO = "draw_demo";
     public static final String CUSTOM_VIEW_DRAW_DRAG_BEZIER = "draw_drag_bezier";
     public static final String CUSTOM_VIEW_DRAW_COLLECTION = "draw_collection";
     public static final String CUSTOM_VIEW_DRAW_SECOO = "draw_secoo";

@@ -4,7 +4,6 @@ import android.app.ActivityOptions;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.view.Window;
 import android.widget.ExpandableListView;
 
 import com.google.gson.Gson;
@@ -52,7 +51,6 @@ public class MainActivity extends CompatStatusBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Window window = getWindow();
         ButterKnife.bind(this);
 
         datas = initData();

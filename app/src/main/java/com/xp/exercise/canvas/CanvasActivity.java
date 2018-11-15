@@ -6,6 +6,8 @@ import android.view.View;
 import com.xp.exercise.Constant;
 import com.xp.exercise.R;
 import com.xp.exercise.canvas.widget.BezierRoundIndicatorView;
+import com.xp.exercise.canvas.widget.BezierThreeView;
+import com.xp.exercise.canvas.widget.BezierTwoView;
 import com.xp.exercise.canvas.widget.CanvasView;
 import com.xp.exercise.canvas.widget.CircleWaveView;
 import com.xp.exercise.canvas.widget.FlowWaveView;
@@ -41,7 +43,13 @@ public class CanvasActivity extends CompatStatusBarActivity {
             case Constant.CUSTOM_VIEW_DRAW_PATH:
                 view = new PathView(this);
                 break;
-            case Constant.CUSTOM_VIEW_DRAW_BEZIER:
+            case Constant.CUSTOM_VIEW_DRAW_TWO_BEZIER:
+                view = new BezierTwoView(this);
+                break;
+            case Constant.CUSTOM_VIEW_DRAW_THREE_BEZIER:
+                view = new BezierThreeView(this);
+                break;
+            case Constant.CUSTOM_VIEW_DRAW_DEMO:
                 view = new PathCubic(this);
                 break;
             case Constant.CUSTOM_VIEW_DRAW_DRAG_BEZIER:
