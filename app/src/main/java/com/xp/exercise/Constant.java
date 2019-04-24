@@ -18,6 +18,7 @@ public class Constant {
     public static final String PARENT_ITEM_ANIMATOR = "animator";
     public static final String PARENT_ITEM_VIEWGROUP = "viewgroup";
     public static final String PARENT_ITEM_VIEWPAGER = "viewpager";
+    public static final String PARENT_ITEM_VIEWDRAGHELPER = "viewdraghelper";
 
     //自定义View下二级分类tag常量
     public static final String EXTRA_CUSTOM_VIEW_TAG = "custom_view_tag";
@@ -78,4 +79,7 @@ public class Constant {
 
     //viewpager下 二级分类 tag常量
     public static final String VIEWPAGER_INDICATE = "viewpager_indicate";
+
+    //viewdraghelper下 二级分类 tag常量
+    public static final String VIEWDRAGHELPER_TEST = "viewdraghelper_test";
 }

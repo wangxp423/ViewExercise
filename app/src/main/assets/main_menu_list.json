@@ -245,6 +245,19 @@
           "title": "ViewPager酷炫滑动指示器"
         }
       ]
+    },
+    {
+      "id": 8,
+      "tag": "viewdraghelper",
+      "title": "ViewDragHelper拖拽效果研究",
+      "childs": [
+        {
+          "id": 0,
+          "tag": "viewdraghelper_test",
+          "title": "ViewDragHelper研究"
+        }
+      ]
     }
+
   ]
 }

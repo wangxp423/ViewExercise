@@ -1,0 +1,12 @@
+<com.xp.exercise.viewdraghelper.lesson1.DragLayoutOne xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/dragview"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="#ffd74d99" />
+
+</com.xp.exercise.viewdraghelper.lesson1.DragLayoutOne>

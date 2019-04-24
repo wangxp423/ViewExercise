@@ -76,6 +76,25 @@
             android:name=".viewpager.IndicatorViewPagerActivity"
             android:theme="@style/AppSwipeTheme" />
 
+        <activity
+            android:name=".viewdraghelper.MainViewDragHelperActivity"
+            android:theme="@style/AppSwipeTheme" />
+        <activity
+            android:name=".viewdraghelper.lesson1.LessonOneActivity"
+            android:theme="@style/AppSwipeTheme" />
+        <activity
+            android:name=".viewdraghelper.lesson2.LessonTwoActivity"
+            android:theme="@style/AppSwipeTheme" />
+        <activity
+            android:name=".viewdraghelper.lesson3.LessonThreeActivity"
+            android:theme="@style/AppSwipeTheme" />
+        <activity
+            android:name=".viewdraghelper.lesson4.LessonFourActivity"
+            android:theme="@style/AppSwipeTheme" />
+        <activity
+            android:name=".viewdraghelper.lesson5.LessonFiveActivity"
+            android:theme="@style/AppSwipeTheme" />
+
     </application>
 
 </manifest>

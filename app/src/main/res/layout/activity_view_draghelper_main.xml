@@ -1,0 +1,59 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:gravity="center"
+        android:text="一共包含5个例子，例子难度逐渐递增，通过demo的学习可以基本掌握ViewDragHelper的用法"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/button_lesson1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:onClick="lessonOne"
+        android:text="Lesson 1"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/button_lesson2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:onClick="lessonTwo"
+        android:text="Lesson 2"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/button_lesson3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:onClick="lessonThree"
+        android:text="Lesson 3"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/button_lesson4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:onClick="lessonFour"
+        android:text="Lesson 4"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/button_lesson5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:onClick="lessonFive"
+        android:text="Lesson 5"
+        android:textSize="20sp" />
+
+</LinearLayout>

@@ -1,0 +1,56 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <com.xp.exercise.viewdraghelper.lesson2.DragLayoutTwo
+        android:id="@+id/drag_layout"
+        android:layout_width="60dp"
+        android:layout_height="match_parent"
+        android:background="#ff7dffc2"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/dragview"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="#ffd74d99" />
+    </com.xp.exercise.viewdraghelper.lesson2.DragLayoutTwo>
+
+    <View
+        android:id="@+id/devider_middle"
+        android:layout_width="80dp"
+        android:layout_height="1dp"
+        android:background="#000000"
+        android:layout_toRightOf="@+id/drag_layout"
+        android:layout_centerVertical="true" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/drag_layout"
+        android:layout_above="@+id/devider_middle">
+
+        <View
+            android:layout_width="60dp"
+            android:layout_height="1dp"
+            android:background="#000000"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@+id/drag_layout"
+        android:layout_below="@+id/devider_middle">
+
+        <View
+            android:layout_width="60dp"
+            android:layout_height="1dp"
+            android:background="#000000"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+</RelativeLayout>
+
+

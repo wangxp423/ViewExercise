@@ -1,0 +1,37 @@
+<com.xp.exercise.viewdraghelper.lesson5.DragLayoutFive xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="#ff959595"
+        android:gravity="right|center_vertical">
+
+        <Button
+            android:id="@+id/button_hidden"
+            android:layout_width="90dp"
+            android:layout_height="48dp"
+            android:text="Delete" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linear_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:background="#ffd7e8da"
+        android:clickable="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/text_view_name"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:gravity="center_vertical"
+            android:textSize="22sp" />
+    </LinearLayout>
+
+
+</com.xp.exercise.viewdraghelper.lesson5.DragLayoutFive>

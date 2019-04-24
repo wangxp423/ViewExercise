@@ -30,6 +30,7 @@ import com.xp.exercise.toolbar.MyBehaviorActivity;
 import com.xp.exercise.toolbar.TitleImageBehaviorActivity;
 import com.xp.exercise.util.AssetsUtil;
 import com.xp.exercise.util.ToastUtils;
+import com.xp.exercise.viewdraghelper.MainViewDragHelperActivity;
 import com.xp.exercise.viewgroup.activity.CustomViewGroupActivity;
 import com.xp.exercise.viewgroup.activity.ScrollerTestActivity;
 import com.xp.exercise.viewgroup.activity.VisibleActivity;
@@ -95,6 +96,9 @@ public class MainActivity extends CompatStatusBarActivity {
                 break;
             case Constant.PARENT_ITEM_VIEWPAGER:
                 childViewpagerCategory(twoEntity);
+                break;
+            case Constant.PARENT_ITEM_VIEWDRAGHELPER:
+                childViewDragHelperCategory(twoEntity);
                 break;
             default:
                 break;
@@ -246,6 +250,18 @@ public class MainActivity extends CompatStatusBarActivity {
         switch (tag) {
             case Constant.VIEWPAGER_INDICATE:
                 startActivity(new Intent(this, IndicatorViewPagerActivity.class));
+                break;
+            default:
+                break;
+        }
+    }
+
+    //viewdraghelper 效果研究
+    private void childViewDragHelperCategory(MainListEntity.LevelTwoEntity entity) {
+        String tag = entity.getTag();
+        switch (tag) {
+            case Constant.VIEWDRAGHELPER_TEST:
+                startActivity(new Intent(this, MainViewDragHelperActivity.class));
                 break;
             default:
                 break;
