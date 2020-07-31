@@ -26,23 +26,9 @@
 //      }
 //    }
 
-    function MCDriver() {
-    }
-    MCDriver.prototype.getLocation = function({},success,fail) {
-       bridge.call("getDriverLocation","im going to getlocation",function(ret){
-         if (ret == ""){
-           fail("获取经纬度失败");
-         } else {
-           success(JSON.stringify(ret))
-         }
-       })
-    }
-    MCDriver.prototype.launchNav = function(params,success,fail) {
-               bridge.call("skipMapNavigation",params,function(ret){
-                   success(JSON.stringify(ret))
-               })
-    }
-    w['meixiansong111'] = 'aaa'
-   w.meixiansong = new MCDriver();
-   console.log('2222222', w)
+   const appName = 'meixiansong';
+w[appName] = {
+  getLocation: '1',
+  launchNav: '2'
+};
 })(window)
