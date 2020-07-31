@@ -26,7 +26,7 @@
 //      }
 //    }
 
-   const appName = 'meixiansong';
+   const appName = 'xiaojuapp';
 window[appName] = {
   getLocation: '1',
   launchNav: '2'
