@@ -1,34 +1,43 @@
-
-
-// (function (w) {
-//     var bridge={default:this,call:function(b,a,c){var e="";"function"==typeof a&&(c=a,a={});a={data:void 0===a?null:a};if("function"==typeof c){var g="dscb"+window.dscb++;window[g]=c;a._dscbstub=g}a=JSON.stringify(a);if(window._dsbridge)e=_dsbridge.call(b,a);else if(window._dswk||-1!=navigator.userAgent.indexOf("_dsbridge"))e=prompt("_dsbridge="+b,a);return JSON.parse(e||"{}").data},register:function(b,a,c){c=c?window._dsaf:window._dsf;window._dsInit||(window._dsInit=!0,setTimeout(function(){bridge.call("_dsb.dsinit")},
-//         0));"object"==typeof a?c._obs[b]=a:c[b]=a},registerAsyn:function(b,a){this.register(b,a,!0)},hasNativeMethod:function(b,a){return this.call("_dsb.hasNativeMethod",{name:b,type:a||"all"})},disableJavascriptDialogBlock:function(b){this.call("_dsb.disableJavascriptDialogBlock",{disable:!1!==b})}};
-//     !function(){if(!window._dsf){var b={_dsf:{_obs:{}},_dsaf:{_obs:{}},dscb:0,dsBridge:bridge,close:function(){bridge.call("_dsb.closePage")},_handleMessageFromNative:function(a){var e=JSON.parse(a.data),b={id:a.callbackId,complete:!0},c=this._dsf[a.method],d=this._dsaf[a.method],h=function(a,c){b.data=a.apply(c,e);bridge.call("_dsb.returnValue",b)},k=function(a,c){e.push(function(a,c){b.data=a;b.complete=!1!==c;bridge.call("_dsb.returnValue",b)});a.apply(c,e)};if(c)h(c,this._dsf);else if(d)k(d,this._dsaf);
-//       else if(c=a.method.split("."),!(2>c.length)){a=c.pop();var c=c.join("."),d=this._dsf._obs,d=d[c]||{},f=d[a];f&&"function"==typeof f?h(f,d):(d=this._dsaf._obs,d=d[c]||{},(f=d[a])&&"function"==typeof f&&k(f,d))}}},a;for(a in b)window[a]=b[a];bridge.register("_hasJavascriptMethod",function(a,b){b=a.split(".");if(2>b.length)return!(!_dsf[b]&&!_dsaf[b]);a=b.pop();b=b.join(".");return(b=_dsf._obs[b]||_dsaf._obs[b])&&!!b[a]})}}();
-
-//     console.log('win', window)
-//
-//    class MCDriver {
-//      getLocation({},success,fail) {
-//        bridge.call("getDriverLocation","im going to getlocation",function(ret){
-//          if (ret == ""){
-//            fail("获取经纬度失败");
-//          } else {
-//            success(JSON.stringify(ret))
-//          }
-//        })
-//      }
-//
-//      launchNav(params,success,fail) {
-//        bridge.call("skipMapNavigation",params,function(ret){
-//            success(JSON.stringify(ret))
-//        })
-//      }
-//    }
-
-   const appName = 'xiaojuapp';
+const appName = 'xiaojuapp';
 window[appName] = {
-  getLocation: '1',
-  launchNav: '2'
+  getLocation: customeGetLocation,
+  launchNav: customeLaunchNav
 };
-// })(window)
+
+function h5Location(cb) {
+  navigator.geolocation.getCurrentPosition(
+    pos => {
+      const { latitude, longitude } = pos.coords;
+      cb({ lat: latitude, lng: longitude });
+    },
+    error => {
+      // 瀹归敊 榛樿鍖椾含
+      cb({ error, lat: 39.92, lng: 116.46 });
+    },
+    {
+      enableHighAccuracy: true
+    }
+  );
+}
+
+function openGMap(params) {
+  const { fromLng, fromLat, toLng, toLat, toName } = params;
+  // 鑾峰彇鍒扮敤鎴峰畾浣嶄俊鎭紝璧板鑸ā寮忥紱鏈幏鍙栧埌鐢ㄦ埛瀹氫綅淇℃伅锛岃蛋鍗曠偣鏍囨敞妯″紡
+  const url = `https://uri.amap.com/navigation?from=${fromLng},${fromLat}&to=${toLng},${toLat},${toName}&mode=car&policy=1&callnative=1`;
+  window.location.href = url;
+  console.log(url)
+}
+
+function customeGetLocation(params, resCall, errCall) {
+  // H5 瀹氫綅
+  if (navigator.geolocation) {
+    h5Location(resCall);
+  } else {
+    // console.log()
+    errCall && errCall(new Error('娴忚鍣ㄤ笉鏀寔瀹氫綅'));
+  }
+}
+
+function customeLaunchNav(params) {
+  openGMap(params);
+}
