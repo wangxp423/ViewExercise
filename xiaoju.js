@@ -42,7 +42,7 @@
                    success(JSON.stringify(ret))
                })
     }
-    w.meixiansong111 = 'aaa'
+    w['meixiansong111'] = 'aaa'
    w.meixiansong = new MCDriver();
    console.log('2222222', w)
 })(window)
