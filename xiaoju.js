@@ -22,5 +22,7 @@ class MCDriver {
 }
 
 (function (w) {
+  console.log('111111', w)
   w.meixiansong = new MCDriver();
+  console.log('2222222', w)
 })(window)
