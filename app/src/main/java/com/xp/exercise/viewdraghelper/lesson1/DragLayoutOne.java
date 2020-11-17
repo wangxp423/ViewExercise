@@ -1,6 +1,8 @@
 package com.xp.exercise.viewdraghelper.lesson1;
 
 import android.content.Context;
+import android.support.annotation.NonNull;
+import android.support.v4.view.ViewCompat;
 import android.support.v4.widget.ViewDragHelper;
 import android.util.AttributeSet;
 import android.util.Log;
@@ -91,8 +93,15 @@ public class DragLayoutOne extends LinearLayout {
             }
             super.onViewDragStateChanged(state);
         }
+
+        @Override
+        public void onViewReleased(@NonNull View releasedChild, float xvel, float yvel) {
+            setViewReleased(releasedChild);
+            super.onViewReleased(releasedChild, xvel, yvel);
+        }
     }
 
+    //添加点击事件以后不能移动，下面需要注意
     @Override
     public boolean onInterceptTouchEvent(MotionEvent ev) {
         switch (ev.getAction()) {
@@ -111,8 +120,28 @@ public class DragLayoutOne extends LinearLayout {
     }
 
     @Override
+    public void computeScroll() {
+        super.computeScroll();
+        if (mViewDragHelper.continueSettling(true)) {
+            ViewCompat.postInvalidateOnAnimation(this);
+        }
+    }
+
+    @Override
     protected void onFinishInflate() {
         super.onFinishInflate();
         mDragView = findViewById(R.id.dragview);
+    }
+
+    private void setViewReleased(View releasedChild) {
+        Log.d("Test", "l = " + releasedChild.getLeft() + " t = " + releasedChild.getTop() + " r = " + releasedChild.getRight() + " b = " + releasedChild.getBottom());
+        int screenWidth = 540;
+        int left = releasedChild.getLeft();
+        if (left > screenWidth) {
+            mViewDragHelper.settleCapturedViewAt(860, releasedChild.getTop());
+        } else {
+            mViewDragHelper.settleCapturedViewAt(0, releasedChild.getTop());
+        }
+        invalidate();
     }
 }

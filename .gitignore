@@ -8,3 +8,4 @@ app/build/
 /build
 /captures
 .externalNativeBuild
+/.idea/

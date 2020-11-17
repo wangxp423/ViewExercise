@@ -21,7 +21,7 @@ import com.xp.exercise.statsbar.FragmentStatusbarActivity;
 import com.xp.exercise.statsbar.FullScreenHaveStatusActivity;
 import com.xp.exercise.statsbar.StatusBarTextColor2Activity;
 import com.xp.exercise.statsbar.StatusBarTextColorActivity;
-import com.xp.exercise.statsbar.base.CompatStatusBarActivity;
+import com.xp.exercise.statsbar.base.StatusBarBaseActivity;
 import com.xp.exercise.toolbar.BottomSheetActivity;
 import com.xp.exercise.toolbar.CollapsingToolbarActivity;
 import com.xp.exercise.toolbar.CollapsingToolbarSnapActivity;
@@ -41,7 +41,7 @@ import java.util.ArrayList;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class MainActivity extends CompatStatusBarActivity {
+public class MainActivity extends StatusBarBaseActivity {
 
     @BindView(R.id.main_elv)
     ExpandableListView mainElv;
